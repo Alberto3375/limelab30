@@ -1,15 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Mail, Phone, MapPin, Linkedin, Twitter, Instagram, Github } from 'lucide-react';
+import { Heart, Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
 
 const Footer = () => {
-  const socialLinks = [
-    { icon: Linkedin, href: "#", color: "hover:text-blue-600" },
-    { icon: Twitter, href: "#", color: "hover:text-sky-500" },
-    { icon: Instagram, href: "#", color: "hover:text-pink-500" },
-    { icon: Github, href: "#", color: "hover:text-gray-800" }
-  ];
-
+const socialLinks = [
+  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61579192204687", color: "hover:text-blue-600" },
+  { icon: Instagram, href: "https://www.instagram.com/limelab30", color: "hover:text-pink-500" }
+];
   const quickLinks = [
     { name: "Inicio", href: "#home" },
     { name: "Servicios", href: "#services" },
