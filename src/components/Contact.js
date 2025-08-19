@@ -27,14 +27,15 @@ const Contact = () => {
     e.preventDefault();
     setStatus({ submitting: true, submitted: false, error: false, errorMessage: '' });
 
-    try {
-      const response = await fetch('http://localhost:3001/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+ try {
+  const response = await fetch('https://limelab.onrender.com/api/contact', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  });
+
 
       const data = await response.json();
 
