@@ -106,8 +106,7 @@ const Services = () => {
                     className="flex items-center gap-2 text-gray-700 font-medium group-hover:text-gray-900 transition-colors"
                     whileHover={{ x: 5 }}
                   >
-                    Saber más
-                    <ArrowRight className="w-4 h-4" />
+              
                   </motion.div>
                 </div>
 
