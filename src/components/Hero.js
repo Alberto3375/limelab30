@@ -55,16 +55,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="max-w-5xl mx-auto"
         >
-          {/* Badge */}
-          <motion.div
-            className="inline-flex items-center gap-2 px-5 py-2 bg-white/70 backdrop-blur-md rounded-full text-lime-700 font-semibold mb-8 shadow-md"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3 }}
-          >
-            <Heart className="w-4 h-4 text-red-500" />
-            Innovamos con el corazón de una familia
-          </motion.div>
+  
 
           {/* Title */}
           <motion.h1
