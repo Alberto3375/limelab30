@@ -17,7 +17,7 @@ const Header = () => {
       
       // Ocultar/mostrar el header basado en la dirección del scroll
       if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
-        // Scroll hacia abajo - ocultar header
+        // Scroll hacia abajo - ocultar header completamente
         setIsHidden(true);
       } else if (currentScrollY < lastScrollY.current) {
         // Scroll hacia arriba - mostrar header
@@ -47,9 +47,13 @@ const Header = () => {
           ? "bg-[#e7e7e7]/95 backdrop-blur-xl shadow-xl border-b border-gray-300"
           : "bg-transparent"
       }`}
-      initial={{ y: 0 }}
-      animate={{ y: isHidden ? -100 : 0 }}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
+      initial={{ y: 0, opacity: 1 }}
+      animate={{ 
+        y: isHidden ? -100 : 0, 
+        opacity: isHidden ? 0 : 1 
+      }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
+      style={{ pointerEvents: isHidden ? 'none' : 'auto' }}
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
