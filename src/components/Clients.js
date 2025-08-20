@@ -62,35 +62,35 @@ const Clients = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           {clients.map((client, index) => (
             <motion.div
               key={client.id}
-              className={`rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-all duration-300 border ${client.borderColor}`}
+              className={`rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-all duration-300 border ${client.borderColor} flex flex-col h-full`}
               initial={{ scale: 0.95, opacity: 0, y: 20 }}
               whileInView={{ scale: 1, opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
             >
-              {/* Imagen con overlay */}
-              <div className="relative overflow-hidden group h-56 cursor-pointer" onClick={() => setSelectedClient(client)}>
+              {/* Imagen con overlay - Mejorada para desktop */}
+              <div className="relative overflow-hidden group h-72 lg:h-80 cursor-pointer" onClick={() => setSelectedClient(client)}>
                 <img
                   src={client.image}
                   alt={client.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   onError={handleImageError}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <span className="text-white text-sm font-medium bg-black/30 px-3 py-1 rounded-full backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <span className="text-white text-sm font-medium bg-black/40 px-4 py-2 rounded-full backdrop-blur-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     Ver detalles
                   </span>
                 </div>
               </div>
 
               {/* Contenido de la tarjeta */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className={`p-3 rounded-full ${client.bgColor}`}>
+                  <div className={`p-3 rounded-full ${client.bgColor} flex-shrink-0`}>
                     {React.cloneElement(client.icon, { className: `w-6 h-6 ${client.textColor}` })}
                   </div>
                   <div>
@@ -99,7 +99,7 @@ const Clients = () => {
                   </div>
                 </div>
 
-                <p className="text-gray-700 mb-4 leading-relaxed line-clamp-3">{client.description}</p>
+                <p className="text-gray-700 mb-4 leading-relaxed line-clamp-3 flex-grow">{client.description}</p>
 
                 <div>
                   <h5 className="font-semibold mb-3 text-gray-800">Tecnologías utilizadas:</h5>
@@ -119,21 +119,21 @@ const Clients = () => {
           ))}
         </div>
 
-        {/* Modal de detalles del proyecto */}
+        {/* Modal de detalles del proyecto - Mejorado para desktop */}
         <AnimatePresence>
           {selectedClient && (
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 z-50"
+              className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-50"
               onClick={() => setSelectedClient(null)}
             >
               <motion.div 
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                className={`relative bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto ${selectedClient.bgColor} border ${selectedClient.borderColor}`}
+                className={`relative bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto ${selectedClient.bgColor} border ${selectedClient.borderColor}`}
                 onClick={(e) => e.stopPropagation()}
               >
                 <button 
@@ -143,7 +143,7 @@ const Clients = () => {
                   <X className="w-5 h-5 text-gray-700" />
                 </button>
 
-                <div className="h-72 md:h-96 overflow-hidden">
+                <div className="h-96 overflow-hidden">
                   <img
                     src={selectedClient.image}
                     alt={selectedClient.name}
@@ -152,9 +152,9 @@ const Clients = () => {
                   />
                 </div>
 
-                <div className="p-6 md:p-8">
+                <div className="p-8">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className={`p-4 rounded-2xl bg-white shadow-md`}>
+                    <div className={`p-4 rounded-2xl bg-white shadow-md flex-shrink-0`}>
                       {React.cloneElement(selectedClient.icon, { className: `w-8 h-8 ${selectedClient.textColor}` })}
                     </div>
                     <div>
@@ -163,7 +163,7 @@ const Clients = () => {
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-8">
+                  <div className="grid lg:grid-cols-2 gap-8">
                     <div>
                       <h4 className="font-semibold text-lg mb-4 text-gray-800">Descripción del proyecto</h4>
                       <p className="text-gray-700 mb-6 leading-relaxed">{selectedClient.description}</p>
