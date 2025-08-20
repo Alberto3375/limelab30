@@ -1,16 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, Zap, Heart, Users, Target, Lightbulb, Briefcase } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      
+      // Determinar si el usuario ha scrolleado lo suficiente para cambiar el estado
+      setScrolled(currentScrollY > 50);
+      
+      // Ocultar/mostrar el header basado en la dirección del scroll
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        // Scroll hacia abajo - ocultar header
+        setIsHidden(true);
+      } else if (currentScrollY < lastScrollY.current) {
+        // Scroll hacia arriba - mostrar header
+        setIsHidden(false);
+      }
+      
+      lastScrollY.current = currentScrollY;
     };
-    window.addEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -30,9 +47,9 @@ const Header = () => {
           ? "bg-[#e7e7e7]/95 backdrop-blur-xl shadow-xl border-b border-gray-300"
           : "bg-transparent"
       }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
+      initial={{ y: 0 }}
+      animate={{ y: isHidden ? -100 : 0 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
