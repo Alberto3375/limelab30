@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Database, ShoppingCart, ShieldCheck } from 'lucide-react';
+import { Database, ShoppingCart } from 'lucide-react';
 
 const Clients = () => {
   const clients = [
@@ -13,6 +13,7 @@ const Clients = () => {
         "Desarrollé un sistema web administrable para la gestión de productos, con registro de usuarios, login seguro y manejo de inventario.",
       icon: <Database className="w-8 h-8 text-blue-600" />,
       bgColor: "from-blue-50 to-blue-100",
+      image: "/img/farmacia-drbee.png", // Imagen portada del sitio
     },
     {
       id: 2,
@@ -23,6 +24,7 @@ const Clients = () => {
         "Implementé un e-commerce para muebles de acero inoxidable con login, carrito de compras y gestión de pedidos en tiempo real.",
       icon: <ShoppingCart className="w-8 h-8 text-green-600" />,
       bgColor: "from-green-50 to-lime-100",
+      image: "/img/yomonalex.png", // Imagen portada del sitio
     },
   ];
 
@@ -48,6 +50,16 @@ const Clients = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               whileHover={{ y: -10 }}
             >
+              {/* Imagen de portada */}
+              <div className="mb-6 overflow-hidden rounded-2xl shadow-md">
+                <img
+                  src={client.image}
+                  alt={client.name}
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              {/* Encabezado con icono */}
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-4 bg-white rounded-2xl shadow-md">
                   {client.icon}
@@ -58,8 +70,10 @@ const Clients = () => {
                 </div>
               </div>
 
+              {/* Descripción */}
               <p className="text-gray-700 mb-6 leading-relaxed">{client.description}</p>
 
+              {/* Tecnologías */}
               <div>
                 <h5 className="font-semibold mb-3 text-gray-800">Tecnologías utilizadas:</h5>
                 <div className="flex flex-wrap gap-2">
