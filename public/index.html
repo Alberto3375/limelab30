@@ -1,12 +1,465 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIMELAB | TECHNOLOGIES | EMPRESA DE SOFTWARE A LA MEDIDA</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LIMELAB Technologies — Soluciones digitales, software, automatización, IA, Odoo, sitios web e invitaciones digitales.">
+  <title>LIMELAB Technologies | Tecnología con propósito</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cursor-glow"></div>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="brand">
+        <img src="https://limelab30.vercel.app/img/logo_lime.png" alt="LIMELAB Technologies">
+        <span>LIMELAB<small>TECHNOLOGIES</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Inicio</a>
+        <a href="#services">Servicios</a>
+        <a href="#values">Valores</a>
+        <a href="#about">Nosotros</a>
+        <a href="#portfolio">Proyectos</a>
+        <a href="#contact" class="nav-cta">Hablemos <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero section-grid" id="home">
+      <div class="hero-orb orb-one"></div>
+      <div class="hero-orb orb-two"></div>
+
+      <div class="container hero-content">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span></span> Tecnología hecha con propósito</div>
+          <h1>Ideas que se convierten en <em>experiencias digitales.</em></h1>
+          <p class="hero-text">
+            En LIMELAB creamos software, automatizaciones, sitios web, aplicaciones,
+            experiencias digitales e inteligencia artificial para convertir ideas
+            en soluciones reales.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#services" class="btn btn-primary">Explorar servicios <i class="fa-solid fa-arrow-down"></i></a>
+            <a href="https://wa.me/523332250942?text=Hola%20LIMELAB,%20me%20gustaría%20conocer%20sus%20servicios." target="_blank" rel="noopener" class="btn btn-ghost">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+
+          <div class="hero-proof">
+            <div><strong>∞</strong><span>Ideas<br>sin límites</span></div>
+            <div><strong>01</strong><span>Soluciones<br>a medida</span></div>
+            <div><strong>100%</strong><span>Compromiso<br>personal</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal-delay">
+          <div class="visual-card main-card">
+            <div class="window-top">
+              <div class="window-dots"><i></i><i></i><i></i></div>
+              <span>LIMELAB / digital-lab</span>
+            </div>
+            <div class="code-lines">
+              <span><b>01</b> <i>&lt;idea&gt;</i></span>
+              <span><b>02</b> &nbsp; transformar(idea);</span>
+              <span><b>03</b> &nbsp; innovar();</span>
+              <span><b>04</b> &nbsp; automatizar();</span>
+              <span><b>05</b> &nbsp; <strong>crear_impacto();</strong></span>
+              <span><b>06</b> <i>&lt;/idea&gt;</i></span>
+            </div>
+            <div class="terminal-status">
+              <span class="status-dot"></span> Sistema listo
+              <span class="status-right">LIMELAB_01</span>
+            </div>
+          </div>
+
+          <div class="floating-card float-one">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <div><strong>Experiencias</strong><small>que conectan</small></div>
+          </div>
+
+          <div class="floating-card float-two">
+            <i class="fa-solid fa-bolt"></i>
+            <div><strong>Automatiza</strong><small>lo repetitivo</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>SOFTWARE</span><i>✦</i><span>WEB</span><i>✦</i><span>ODOO</span><i>✦</i>
+        <span>IA</span><i>✦</i><span>AUTOMATIZACIÓN</span><i>✦</i><span>APPS</span><i>✦</i>
+        <span>INVITACIONES DIGITALES</span><i>✦</i><span>SOFTWARE</span><i>✦</i>
+        <span>WEB</span><i>✦</i><span>ODOO</span><i>✦</i><span>IA</span><i>✦</i>
+        <span>AUTOMATIZACIÓN</span><i>✦</i><span>APPS</span><i>✦</i>
+        <span>INVITACIONES DIGITALES</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- INTRO -->
+    <section class="intro section" id="story">
+      <div class="container intro-grid">
+        <div class="section-label reveal">01 / Lo que hacemos</div>
+        <div class="intro-copy reveal">
+          <h2>No hacemos tecnología por hacerla.<br><span>La hacemos para resolver.</span></h2>
+          <p>
+            LIMELAB nace de una idea sencilla: la tecnología puede ser poderosa sin dejar
+            de ser humana. Diseñamos soluciones digitales pensando primero en las personas,
+            sus problemas y sus objetivos.
+          </p>
+          <p>
+            Desde una invitación digital para un momento especial hasta la automatización
+            de una empresa, cada proyecto recibe la misma atención: entender, crear,
+            probar y entregar algo que realmente tenga sentido.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services section dark-section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-label light">02 / Servicios</div>
+            <h2>Todo lo digital,<br><span>en un solo lugar.</span></h2>
+          </div>
+          <p>Desde una idea pequeña hasta una solución empresarial completa.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card featured reveal">
+            <div class="service-number">01</div>
+            <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Software a medida</h3>
+            <p>Sistemas y herramientas construidas alrededor de la forma real en que trabaja tu negocio.</p>
+            <ul><li>Aplicaciones empresariales</li><li>Dashboards</li><li>Integraciones</li><li>APIs y automatizaciones</li></ul>
+            <a href="#contact">Quiero una solución <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-number">02</div>
+            <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+            <h3>Web & e-commerce</h3>
+            <p>Experiencias web modernas, rápidas, responsivas y diseñadas para convertir visitas en oportunidades.</p>
+            <ul><li>Landing pages</li><li>Web corporativa</li><li>Catálogos</li><li>Tiendas online</li></ul>
+            <a href="#contact">Crear mi sitio <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-number">03</div>
+            <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h3>Aplicaciones móviles</h3>
+            <p>Apps para conectar servicios, clientes y procesos desde cualquier lugar.</p>
+            <ul><li>Apps híbridas</li><li>Apps empresariales</li><li>Paneles administrativos</li><li>Integraciones</li></ul>
+            <a href="#contact">Crear una app <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-number">04</div>
+            <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+            <h3>IA & automatización</h3>
+            <p>Menos tareas repetitivas. Más tiempo para lo que realmente importa.</p>
+            <ul><li>IA aplicada</li><li>WhatsApp</li><li>Flujos automáticos</li><li>Procesamiento de datos</li></ul>
+            <a href="#contact">Automatizar <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-number">05</div>
+            <div class="service-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <h3>Odoo & ERP</h3>
+            <p>Digitalización de procesos comerciales y operativos con Odoo adaptado a cada empresa.</p>
+            <ul><li>CRM y Ventas</li><li>Studio</li><li>Automatizaciones</li><li>Capacitación</li></ul>
+            <a href="#contact">Digitalizar mi negocio <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="service-card special reveal">
+            <div class="service-number">06</div>
+            <div class="service-icon"><i class="fa-solid fa-heart"></i></div>
+            <h3>Invitaciones digitales</h3>
+            <p>Momentos importantes merecen algo más que una imagen. Creamos invitaciones interactivas y memorables.</p>
+            <ul><li>Bodas & XV años</li><li>Eventos</li><li>RSVP & WhatsApp</li><li>Cuenta regresiva</li></ul>
+            <a href="#contact">Crear mi invitación <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-label">03 / Nuestra forma de trabajar</div>
+            <h2>De una conversación<br><span>a algo real.</span></h2>
+          </div>
+          <p>No empezamos programando. Empezamos escuchando.</p>
+        </div>
+
+        <div class="process-line">
+          <div class="process-step reveal"><span>01</span><i class="fa-solid fa-comments"></i><h3>Escuchamos</h3><p>Entendemos tu idea, problema y objetivo.</p></div>
+          <div class="process-step reveal"><span>02</span><i class="fa-solid fa-compass-drafting"></i><h3>Diseñamos</h3><p>Convertimos necesidades en una solución clara.</p></div>
+          <div class="process-step reveal"><span>03</span><i class="fa-solid fa-terminal"></i><h3>Construimos</h3><p>Desarrollamos, integramos y probamos.</p></div>
+          <div class="process-step reveal"><span>04</span><i class="fa-solid fa-rocket"></i><h3>Lanzamos</h3><p>Publicamos y acompañamos después de entregar.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values section dark-section" id="values">
+      <div class="container">
+        <div class="values-top reveal">
+          <div>
+            <div class="section-label light">04 / Nuestros valores</div>
+            <h2>Lo que hacemos importa.<br><span>Cómo lo hacemos, también.</span></h2>
+          </div>
+          <p>Nuestros valores están presentes en cada línea de código, cada diseño y cada conversación.</p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value reveal"><span>01</span><i class="fa-solid fa-lightbulb"></i><h3>Innovación constante</h3><p>Buscamos nuevas formas de resolver problemas y crear experiencias mejores.</p></div>
+          <div class="value reveal"><span>02</span><i class="fa-solid fa-handshake"></i><h3>Compromiso</h3><p>Nos involucramos de verdad en cada proyecto y en cada resultado.</p></div>
+          <div class="value reveal"><span>03</span><i class="fa-solid fa-bullseye"></i><h3>Calidad con propósito</h3><p>No buscamos hacer más. Buscamos hacer algo que realmente sirva.</p></div>
+          <div class="value reveal"><span>04</span><i class="fa-solid fa-people-arrows"></i><h3>Empatía & cercanía</h3><p>La tecnología funciona mejor cuando primero entendemos a las personas.</p></div>
+          <div class="value reveal"><span>05</span><i class="fa-solid fa-seedling"></i><h3>Responsabilidad</h3><p>Construimos pensando en el impacto que nuestras decisiones generan.</p></div>
+          <div class="value quote reveal"><div class="quote-mark">“</div><p>La tecnología debe adaptarse a las personas, no las personas a la tecnología.</p><small>— Filosofía LIMELAB</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / HISTORY -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-label">05 / Nuestra historia</div>
+            <h2>Una idea que comenzó<br><span>con ganas de crear.</span></h2>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-story reveal">
+            <p class="lead">
+              LIMELAB representa la idea de construir tecnología con una perspectiva
+              cercana, creativa y humana.
+            </p>
+            <p>
+              Comenzamos creando proyectos digitales para convertir necesidades concretas
+              en herramientas funcionales. Con cada proyecto aprendimos algo nuevo:
+              escuchar mejor, diseñar mejor y construir soluciones que realmente puedan
+              utilizarse en el mundo real.
+            </p>
+            <p>
+              Hoy LIMELAB reúne desarrollo de software, web, aplicaciones, automatización,
+              IA, Odoo e incluso experiencias digitales para momentos especiales como
+              bodas y celebraciones.
+            </p>
+          </div>
+
+          <div class="timeline reveal">
+            <div class="timeline-item"><span>2023</span><div><h3>El comienzo</h3><p>Primeros proyectos y primeras ideas que dieron forma a LIMELAB.</p></div></div>
+            <div class="timeline-item"><span>2024</span><div><h3>Primeros clientes</h3><p>Proyectos vendidos y experiencias que ayudaron a definir nuestro camino.</p></div></div>
+            <div class="timeline-item"><span>2025</span><div><h3>Consolidación</h3><p>Ampliamos nuestra visión hacia software, web y soluciones digitales.</p></div></div>
+            <div class="timeline-item active"><span>2026</span><div><h3>Nueva etapa</h3><p>Automatización, IA, Odoo, experiencias web e invitaciones digitales.</p></div></div>
+          </div>
+        </div>
+
+        <div class="founder reveal">
+          <div class="founder-avatar">A</div>
+          <div><span>Fundador</span><h3>Alberto Méndez</h3><p>Desarrollador & arquitecto de soluciones digitales</p></div>
+          <div class="founder-note">“Convertir una idea en algo que funciona es solo el comienzo.”</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION VISION -->
+    <section class="mission section section-grid">
+      <div class="container mission-grid">
+        <div class="mission-card reveal">
+          <span>06 / Nuestra misión</span>
+          <i class="fa-solid fa-compass"></i>
+          <h2>Crear tecnología que tenga un <em>impacto real.</em></h2>
+          <p>Desarrollar soluciones digitales útiles, accesibles y significativas que ayuden a personas y empresas a transformar sus ideas, procesos y oportunidades.</p>
+        </div>
+        <div class="mission-card vision-card reveal">
+          <span>Nuestra visión</span>
+          <i class="fa-solid fa-eye"></i>
+          <h2>Ser un referente de tecnología <em>cercana e innovadora.</em></h2>
+          <p>Construir una empresa tecnológica reconocida por la calidad de sus soluciones, la confianza con sus clientes y su capacidad de convertir problemas complejos en experiencias simples.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio section" id="portfolio">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-label">07 / Portafolio</div>
+            <h2>Ideas que ya<br><span>se hicieron realidad.</span></h2>
+          </div>
+          <p>Una selección de proyectos y experiencias digitales.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="project project-large reveal">
+            <div class="project-image">
+              <img src="https://limelab30.vercel.app/img/farmacia-drbee.png" alt="Farmacia Dr. Bee">
+              <div class="project-overlay"><span>Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
+            <div class="project-info"><span>Sistema web</span><h3>Farmacia Dr. Bee</h3><p>Gestión de productos, usuarios e inventario.</p><div class="tags"><b>Laravel</b><b>MySQL</b><b>Bootstrap</b></div></div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-image">
+              <img src="https://limelab30.vercel.app/img/yomonalex.png" alt="Yomonalex">
+              <div class="project-overlay"><span>Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
+            <div class="project-info"><span>E-commerce</span><h3>Yomonalex</h3><p>Tienda online para productos de acero inoxidable.</p><div class="tags"><b>Laravel</b><b>MySQL</b><b>Tailwind</b></div></div>
+          </article>
+
+          <article class="project project-invite reveal">
+            <div class="invite-preview">
+              <div class="invite-ring"></div>
+              <i class="fa-solid fa-heart"></i>
+              <small>UNA EXPERIENCIA DIGITAL</small>
+              <strong>Tu historia<br>comienza aquí.</strong>
+            </div>
+            <div class="project-info"><span>Nueva línea</span><h3>Invitaciones digitales</h3><p>Bodas, XV años y eventos con diseño, animaciones, RSVP y WhatsApp.</p><div class="tags"><b>HTML</b><b>CSS</b><b>JavaScript</b></div></div>
+          </article>
+
+          <article class="project project-automation reveal">
+            <div class="automation-preview"><i class="fa-solid fa-robot"></i><span>AI + AUTOMATION</span><div class="automation-node">WhatsApp</div><div class="automation-arrow">↓</div><div class="automation-node">IA</div><div class="automation-arrow">↓</div><div class="automation-node">Odoo</div></div>
+            <div class="project-info"><span>Automatización</span><h3>Procesos inteligentes</h3><p>Flujos digitales para reducir tareas manuales y conectar herramientas.</p><div class="tags"><b>Odoo</b><b>IA</b><b>APIs</b></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMISE -->
+    <section class="promise section dark-section">
+      <div class="container promise-inner reveal">
+        <div class="section-label light">08 / Nuestra promesa</div>
+        <h2>Tu proyecto no es<br><span>“uno más”.</span></h2>
+        <p>
+          Cada proyecto representa una oportunidad de crear algo extraordinario.
+          Combinamos criterio técnico, creatividad y atención personal para que
+          la solución no solo se vea bien, sino que funcione y tenga sentido.
+        </p>
+        <a href="#contact" class="btn btn-white">Cuéntame tu idea <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="contact-header reveal">
+          <div>
+            <div class="section-label">09 / Hablemos</div>
+            <h2>¿Qué vamos<br><span>a crear?</span></h2>
+          </div>
+          <p>Cuéntame qué tienes en mente. Una idea, un problema, un proyecto o simplemente una pregunta.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <a href="https://wa.me/523332250942?text=Hola%20LIMELAB,%20quiero%20hablar%20sobre%20un%20proyecto." target="_blank" rel="noopener" class="contact-item whatsapp-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <div><small>WhatsApp</small><strong>+52 33 3225 0942</strong><span>Escríbeme directamente →</span></div>
+            </a>
+            <a href="mailto:mendezalberto295@gmail.com" class="contact-item">
+              <i class="fa-regular fa-envelope"></i>
+              <div><small>Email</small><strong>mendezalberto295@gmail.com</strong><span>Respuesta en 24 horas</span></div>
+            </a>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div><small>Ubicación</small><strong>Guadalajara, Jalisco</strong><span>También trabajamos remotamente</span></div>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm">
+            <div class="form-row">
+              <label>Nombre completo *
+                <input type="text" id="name" placeholder="¿Cómo te llamas?" required>
+              </label>
+              <label>Email *
+                <input type="email" id="email" placeholder="tu@email.com" required>
+              </label>
+            </div>
+            <label>¿Qué necesitas?
+              <select id="service">
+                <option value="No estoy seguro">No estoy seguro</option>
+                <option value="Software a medida">Software a medida</option>
+                <option value="Sitio web">Sitio web</option>
+                <option value="Aplicación móvil">Aplicación móvil</option>
+                <option value="IA y automatización">IA y automatización</option>
+                <option value="Odoo / ERP">Odoo / ERP</option>
+                <option value="Invitación digital">Invitación digital</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </label>
+            <label>Cuéntame sobre tu proyecto *
+              <textarea id="message" rows="5" placeholder="Cuéntame brevemente qué quieres crear..." required></textarea>
+            </label>
+            <button class="btn btn-primary form-submit" type="submit">Enviar por WhatsApp <i class="fa-brands fa-whatsapp"></i></button>
+            <small class="form-note">Al enviar, se abrirá WhatsApp con tu mensaje listo para enviarlo.</small>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <img src="https://limelab30.vercel.app/img/logo_lime.png" alt="LIMELAB">
+          <span>LIMELAB<small>TECHNOLOGIES</small></span>
+        </a>
+        <p>Innovamos con propósito, creando soluciones digitales que convierten ideas en realidades.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/limelab30" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61579192204687" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/523332250942" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col"><h4>Explora</h4><a href="#home">Inicio</a><a href="#services">Servicios</a><a href="#values">Valores</a><a href="#about">Nosotros</a><a href="#portfolio">Proyectos</a></div>
+      <div class="footer-col"><h4>Servicios</h4><a href="#services">Software</a><a href="#services">Web & E-commerce</a><a href="#services">IA & Automatización</a><a href="#services">Odoo</a><a href="#services">Invitaciones</a></div>
+      <div class="footer-col"><h4>Contacto</h4><a href="mailto:mendezalberto295@gmail.com">Email</a><a href="https://wa.me/523332250942" target="_blank" rel="noopener">WhatsApp</a><span>Guadalajara, Jalisco</span></div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 LIMELAB Technologies. Hecho con <i class="fa-solid fa-heart"></i> en México.</span>
+      <span>Innovación hecha con propósito.</span>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/523332250942?text=Hola%20LIMELAB,%20quiero%20cotizar%20un%20proyecto." class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i><span>Hablemos</span>
+  </a>
+
+  <button class="back-top" id="backTop" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="script.js"></script>
+</body>
 </html>
