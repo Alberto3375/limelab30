@@ -1,32 +1,29 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import Values from './components/Values';
-import About from './components/About';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Clients from './components/Clients';
-
+import React from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import BusinessAreas from "./components/BusinessAreas";
+import Services from "./components/Services";
+import Gallery from "./components/Gallery";
+import Values from "./components/Values";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <motion.div
-      className="min-h-screen"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-    >
+    <div className="min-h-screen bg-white text-slate-950 antialiased">
       <Header />
-      <Hero />
-      <Services />
-      <Values />
-      <About />
-      <Clients /> {/* Nueva sección */}
-      <Contact />
+      <main>
+        <Hero />
+        <BusinessAreas />
+        <Services />
+        <Gallery />
+        <Values />
+        <About />
+        <Contact />
+      </main>
       <Footer />
-    </motion.div>
+    </div>
   );
 };
 
