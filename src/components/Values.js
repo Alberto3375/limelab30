@@ -1,156 +1,357 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Lightbulb, Heart, Target, Users, Leaf, Sparkles } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Lightbulb,
+  HeartHandshake,
+  Target,
+  UsersRound,
+  Leaf,
+  Sparkles,
+  ArrowUpRight,
+  Check,
+} from "lucide-react";
 
 const Values = () => {
   const values = [
     {
+      number: "01",
       icon: Lightbulb,
-      title: "Innovación Constante",
-      description: "Buscamos soluciones tecnológicas que marquen la diferencia y transformen la manera de hacer las cosas.",
-      color: "from-yellow-400 to-orange-500",
-      bgColor: "from-yellow-50 to-orange-50"
+      title: "Innovación",
+      subtitle: "Pensamos diferente",
+      description:
+        "Exploramos nuevas tecnologías, ideas y metodologías para crear soluciones que realmente generen valor.",
+      accent: "from-yellow-400 via-amber-400 to-orange-500",
+      glow: "bg-yellow-400/20",
     },
     {
-      icon: Heart,
-      title: "Compromiso Familiar",
-      description: "La confianza, el respeto y el apoyo mutuo son parte de nuestro ADN empresarial y personal.",
-      color: "from-pink-400 to-red-500",
-      bgColor: "from-pink-50 to-red-50"
+      number: "02",
+      icon: HeartHandshake,
+      title: "Compromiso",
+      subtitle: "Construimos relaciones",
+      description:
+        "Trabajamos con responsabilidad, transparencia y cercanía para construir relaciones duraderas con nuestros clientes.",
+      accent: "from-rose-400 via-pink-500 to-red-500",
+      glow: "bg-pink-400/20",
     },
     {
+      number: "03",
       icon: Target,
-      title: "Calidad con Propósito",
-      description: "Cada producto y servicio tiene como objetivo mejorar la vida de las personas de manera significativa.",
-      color: "from-blue-400 to-indigo-500",
-      bgColor: "from-blue-50 to-indigo-50"
+      title: "Excelencia",
+      subtitle: "Cada detalle importa",
+      description:
+        "Buscamos entregar productos y servicios de alta calidad, cuidando cada etapa del proceso y cada detalle.",
+      accent: "from-cyan-400 via-blue-500 to-indigo-600",
+      glow: "bg-blue-400/20",
     },
     {
-      icon: Users,
-      title: "Empatía y Cercanía",
-      description: "Trabajamos escuchando a nuestros clientes como parte de nuestra gran familia extendida.",
-      color: "from-purple-400 to-pink-500",
-      bgColor: "from-purple-50 to-pink-50"
+      number: "04",
+      icon: UsersRound,
+      title: "Cercanía",
+      subtitle: "Las personas primero",
+      description:
+        "Escuchamos, entendemos y acompañamos a nuestros clientes para convertir sus necesidades en soluciones.",
+      accent: "from-violet-400 via-purple-500 to-fuchsia-600",
+      glow: "bg-purple-400/20",
     },
     {
+      number: "05",
       icon: Leaf,
-      title: "Responsabilidad Social",
-      description: "Desarrollamos tecnología con impacto positivo en la sociedad y el medio ambiente.",
-      color: "from-green-400 to-emerald-500",
-      bgColor: "from-green-50 to-emerald-50"
-    }
+      title: "Responsabilidad",
+      subtitle: "Tecnología con propósito",
+      description:
+        "Desarrollamos soluciones pensando en el impacto que generamos en las personas, las empresas y nuestro entorno.",
+      accent: "from-emerald-400 via-green-500 to-teal-600",
+      glow: "bg-emerald-400/20",
+    },
   ];
 
   return (
-    <section id="values" className="py-20 bg-gradient-to-br from-white to-gray-50">
-      <div className="container mx-auto px-6">
+    <section
+      id="values"
+      className="relative overflow-hidden bg-[#05070b] py-28 text-white"
+    >
+      {/* =========================================================
+          BACKGROUND
+      ========================================================== */}
+
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute left-[-15%] top-[-10%] h-[500px] w-[500px] rounded-full bg-lime-400/10 blur-[140px]" />
+
+        <div className="absolute right-[-10%] top-[25%] h-[450px] w-[450px] rounded-full bg-cyan-500/10 blur-[150px]" />
+
+        <div className="absolute bottom-[-15%] left-[35%] h-[500px] w-[500px] rounded-full bg-purple-500/10 blur-[160px]" />
+
+        {/* Grid */}
+        <div
+          className="absolute inset-0 opacity-[0.035]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px)",
+            backgroundSize: "70px 70px",
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+
+        {/* =========================================================
+            HEADER
+        ========================================================== */}
+
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 50 }}
+          className="mx-auto mb-20 max-w-4xl text-center"
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
+          {/* Label */}
+
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 rounded-full text-purple-700 font-medium mb-6"
-            initial={{ opacity: 0, scale: 0.8 }}
+            className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 backdrop-blur-md"
+            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <Sparkles className="w-4 h-4" />
-            Nuestros Valores
+            <Sparkles className="h-4 w-4 text-lime-400" />
+
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/70">
+              Lo que nos define
+            </span>
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Los <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">principios</span> que nos guían
+          {/* Title */}
+
+          <h2 className="text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-7xl">
+            Tecnología con
+            <span className="block bg-gradient-to-r from-lime-300 via-lime-400 to-emerald-400 bg-clip-text text-transparent">
+              propósito.
+            </span>
           </h2>
-          
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Nuestros valores no son solo palabras en la pared, son la base de cada decisión, 
-            cada línea de código y cada relación que construimos.
+
+          {/* Description */}
+
+          <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-white/55 sm:text-lg">
+            Nuestra forma de trabajar está basada en principios que nos ayudan
+            a crear soluciones tecnológicas útiles, humanas y preparadas para
+            crecer junto con nuestros clientes.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* =========================================================
+            VALUES GRID
+        ========================================================== */}
+
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {values.map((value, index) => {
             const Icon = value.icon;
-            return (
-              <motion.div
-                key={index}
-                className={`group relative p-8 rounded-3xl bg-gradient-to-br ${value.bgColor} border border-white/50 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden`}
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ delay: index * 0.15, duration: 0.6 }}
-                whileHover={{ y: -10 }}
-                viewport={{ once: true }}
-              >
-                <div className="relative z-10">
-                  <motion.div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${value.color} flex items-center justify-center mb-6 shadow-lg`}
-                    whileHover={{ scale: 1.2, rotate: 10 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Icon className="w-8 h-8 text-white" />
-                  </motion.div>
 
-                  <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-gray-900 transition-colors">
+            return (
+              <motion.article
+                key={value.number}
+                className={`group relative overflow-hidden rounded-[28px] border border-white/[0.08] bg-white/[0.035] p-7 backdrop-blur-xl transition-all duration-500 hover:border-white/[0.16] hover:bg-white/[0.055] ${
+                  index === 0 ? "lg:col-span-2" : ""
+                }`}
+                initial={{
+                  opacity: 0,
+                  y: 50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.1,
+                }}
+                viewport={{
+                  once: true,
+                  margin: "-80px",
+                }}
+                whileHover={{
+                  y: -8,
+                }}
+              >
+                {/* Glow */}
+
+                <div
+                  className={`pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full ${value.glow} opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100`}
+                />
+
+                {/* Top */}
+
+                <div className="relative z-10 flex items-start justify-between">
+                  <div
+                    className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${value.accent} shadow-lg`}
+                  >
+                    <Icon className="h-7 w-7 text-white" />
+                  </div>
+
+                  <span className="text-sm font-bold tracking-widest text-white/20 transition-colors duration-300 group-hover:text-white/40">
+                    {value.number}
+                  </span>
+                </div>
+
+                {/* Content */}
+
+                <div className="relative z-10 mt-8">
+                  <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-lime-400">
+                    {value.subtitle}
+                  </p>
+
+                  <h3 className="text-2xl font-bold tracking-tight text-white">
                     {value.title}
                   </h3>
 
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="mt-4 max-w-xl text-sm leading-7 text-white/50">
                     {value.description}
                   </p>
                 </div>
 
-                {/* Animated background elements */}
-                <motion.div
-                  className="absolute -top-8 -right-8 w-32 h-32 bg-white/10 rounded-full"
-                  animate={{ 
-                    scale: [1, 1.2, 1],
-                    rotate: [0, 180, 360]
-                  }}
-                  transition={{ 
-                    duration: 8,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
+                {/* Bottom */}
+
+                <div className="relative z-10 mt-8 flex items-center justify-between border-t border-white/[0.07] pt-5">
+                  <div className="flex items-center gap-2 text-xs font-semibold text-white/30">
+                    <span
+                      className={`h-1.5 w-1.5 rounded-full bg-gradient-to-r ${value.accent}`}
+                    />
+
+                    LIMELAB Technologies
+                  </div>
+
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-white/30 transition-all duration-300 group-hover:border-lime-400/40 group-hover:text-lime-400">
+                    <ArrowUpRight className="h-4 w-4" />
+                  </div>
+                </div>
+
+                {/* Hover line */}
+
+                <div
+                  className={`absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r ${value.accent} transition-all duration-500 group-hover:w-full`}
                 />
-                <motion.div
-                  className="absolute -bottom-4 -left-4 w-20 h-20 bg-white/20 rounded-full"
-                  animate={{ 
-                    scale: [1, 1.1, 1],
-                    x: [0, 10, 0],
-                    y: [0, -10, 0]
-                  }}
-                  transition={{ 
-                    duration: 6,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                />
-              </motion.div>
+              </motion.article>
             );
           })}
         </div>
 
+        {/* =========================================================
+            PHILOSOPHY
+        ========================================================== */}
+
+        <motion.div
+          className="relative mt-24 overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.035] p-8 backdrop-blur-xl sm:p-12 lg:p-16"
+          initial={{
+            opacity: 0,
+            y: 50,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.8,
+          }}
+          viewport={{
+            once: true,
+          }}
+        >
+          {/* Background glow */}
+
+          <div className="pointer-events-none absolute right-[-100px] top-[-100px] h-72 w-72 rounded-full bg-lime-400/10 blur-[100px]" />
+
+          <div className="relative z-10 grid items-center gap-12 lg:grid-cols-[1fr_auto]">
+
+            {/* Text */}
+
+            <div className="max-w-3xl">
+              <div className="mb-5 flex items-center gap-3">
+                <div className="h-px w-10 bg-lime-400" />
+
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-lime-400">
+                  Nuestra filosofía
+                </span>
+              </div>
+
+              <h3 className="text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
+                No solo hacemos tecnología.
+                <span className="block text-white/35">
+                  Creamos soluciones que tienen sentido.
+                </span>
+              </h3>
+
+              <p className="mt-6 max-w-2xl text-base leading-8 text-white/50">
+                En LIMELAB creemos que la tecnología debe resolver problemas
+                reales. Por eso combinamos creatividad, experiencia técnica y
+                una visión centrada en las personas para transformar ideas en
+                soluciones funcionales.
+              </p>
+            </div>
+
+            {/* Checklist */}
+
+            <div className="min-w-[230px] space-y-4">
+              {[
+                "Soluciones pensadas para personas",
+                "Tecnología preparada para crecer",
+                "Diseño y funcionalidad",
+                "Acompañamiento cercano",
+              ].map((item, index) => (
+                <motion.div
+                  key={item}
+                  className="flex items-center gap-3"
+                  initial={{
+                    opacity: 0,
+                    x: 20,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    x: 0,
+                  }}
+                  transition={{
+                    delay: 0.2 + index * 0.1,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                >
+                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-lime-400/10">
+                    <Check className="h-4 w-4 text-lime-400" />
+                  </div>
+
+                  <span className="text-sm font-medium text-white/65">
+                    {item}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* =========================================================
+            FINAL STATEMENT
+        ========================================================== */}
+
         <motion.div
           className="mt-20 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
         >
-          <div className="max-w-4xl mx-auto p-8 bg-gradient-to-r from-blue-50 to-lime-50 rounded-3xl border border-blue-200/50">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              💙 Nuestra Promesa
-            </h3>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              En LIMELAB Technologies, cada proyecto es una oportunidad de crear algo extraordinario. 
-              Combinamos la calidez de una empresa familiar con la excelencia técnica de un equipo 
-              profesional, porque creemos que la tecnología debe servir a las personas, no al revés.
-            </p>
-          </div>
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-white/25">
+            Innovar · Construir · Transformar
+          </p>
+
+          <div className="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-lime-400 to-transparent" />
         </motion.div>
       </div>
     </section>
