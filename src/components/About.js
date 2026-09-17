@@ -342,4 +342,21 @@ const About = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          viewport
+          viewport={{ once: true }}
+        >
+          <div className="mb-5 flex items-center gap-3">
+            <span className="h-px w-10 bg-lime-400" />
+            <Sparkles className="h-4 w-4 text-lime-500" />
+            <span className="h-px w-10 bg-lime-400" />
+          </div>
+
+          <p className="text-xs font-black uppercase tracking-[0.3em] text-slate-300 sm:text-sm">
+            Innovar · Construir · Transformar
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
