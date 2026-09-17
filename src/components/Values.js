@@ -70,18 +70,11 @@ const Values = () => {
       id="values"
       className="relative overflow-hidden bg-[#05070b] py-28 text-white"
     >
-      {/* =========================================================
-          BACKGROUND
-      ========================================================== */}
-
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[-15%] top-[-10%] h-[500px] w-[500px] rounded-full bg-lime-400/10 blur-[140px]" />
-
         <div className="absolute right-[-10%] top-[25%] h-[450px] w-[450px] rounded-full bg-cyan-500/10 blur-[150px]" />
-
         <div className="absolute bottom-[-15%] left-[35%] h-[500px] w-[500px] rounded-full bg-purple-500/10 blur-[160px]" />
 
-        {/* Grid */}
         <div
           className="absolute inset-0 opacity-[0.035]"
           style={{
@@ -93,11 +86,6 @@ const Values = () => {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-
-        {/* =========================================================
-            HEADER
-        ========================================================== */}
-
         <motion.div
           className="mx-auto mb-20 max-w-4xl text-center"
           initial={{ opacity: 0, y: 40 }}
@@ -105,8 +93,6 @@ const Values = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          {/* Label */}
-
           <motion.div
             className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 backdrop-blur-md"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -115,13 +101,10 @@ const Values = () => {
             viewport={{ once: true }}
           >
             <Sparkles className="h-4 w-4 text-lime-400" />
-
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/70">
               Lo que nos define
             </span>
           </motion.div>
-
-          {/* Title */}
 
           <h2 className="text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-7xl">
             Tecnología con
@@ -130,18 +113,12 @@ const Values = () => {
             </span>
           </h2>
 
-          {/* Description */}
-
           <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-white/55 sm:text-lg">
             Nuestra forma de trabajar está basada en principios que nos ayudan
             a crear soluciones tecnológicas útiles, humanas y preparadas para
             crecer junto con nuestros clientes.
           </p>
         </motion.div>
-
-        {/* =========================================================
-            VALUES GRID
-        ========================================================== */}
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {values.map((value, index) => {
@@ -153,33 +130,15 @@ const Values = () => {
                 className={`group relative overflow-hidden rounded-[28px] border border-white/[0.08] bg-white/[0.035] p-7 backdrop-blur-xl transition-all duration-500 hover:border-white/[0.16] hover:bg-white/[0.055] ${
                   index === 0 ? "lg:col-span-2" : ""
                 }`}
-                initial={{
-                  opacity: 0,
-                  y: 50,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  duration: 0.7,
-                  delay: index * 0.1,
-                }}
-                viewport={{
-                  once: true,
-                  margin: "-80px",
-                }}
-                whileHover={{
-                  y: -8,
-                }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-80px" }}
+                whileHover={{ y: -8 }}
               >
-                {/* Glow */}
-
                 <div
                   className={`pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full ${value.glow} opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100`}
                 />
-
-                {/* Top */}
 
                 <div className="relative z-10 flex items-start justify-between">
                   <div
@@ -193,30 +152,23 @@ const Values = () => {
                   </span>
                 </div>
 
-                {/* Content */}
-
                 <div className="relative z-10 mt-8">
                   <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-lime-400">
                     {value.subtitle}
                   </p>
-
                   <h3 className="text-2xl font-bold tracking-tight text-white">
                     {value.title}
                   </h3>
-
                   <p className="mt-4 max-w-xl text-sm leading-7 text-white/50">
                     {value.description}
                   </p>
                 </div>
-
-                {/* Bottom */}
 
                 <div className="relative z-10 mt-8 flex items-center justify-between border-t border-white/[0.07] pt-5">
                   <div className="flex items-center gap-2 text-xs font-semibold text-white/30">
                     <span
                       className={`h-1.5 w-1.5 rounded-full bg-gradient-to-r ${value.accent}`}
                     />
-
                     LIMELAB Technologies
                   </div>
 
@@ -224,8 +176,6 @@ const Values = () => {
                     <ArrowUpRight className="h-4 w-4" />
                   </div>
                 </div>
-
-                {/* Hover line */}
 
                 <div
                   className={`absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r ${value.accent} transition-all duration-500 group-hover:w-full`}
@@ -235,39 +185,20 @@ const Values = () => {
           })}
         </div>
 
-        {/* =========================================================
-            PHILOSOPHY
-        ========================================================== */}
-
+        {/* PHILOSOPHY */}
         <motion.div
           className="relative mt-24 overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.035] p-8 backdrop-blur-xl sm:p-12 lg:p-16"
-          initial={{
-            opacity: 0,
-            y: 50,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.8,
-          }}
-          viewport={{
-            once: true,
-          }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
-          {/* Background glow */}
-
           <div className="pointer-events-none absolute right-[-100px] top-[-100px] h-72 w-72 rounded-full bg-lime-400/10 blur-[100px]" />
 
           <div className="relative z-10 grid items-center gap-12 lg:grid-cols-[1fr_auto]">
-
-            {/* Text */}
-
             <div className="max-w-3xl">
               <div className="mb-5 flex items-center gap-3">
                 <div className="h-px w-10 bg-lime-400" />
-
                 <span className="text-xs font-bold uppercase tracking-[0.2em] text-lime-400">
                   Nuestra filosofía
                 </span>
@@ -288,8 +219,6 @@ const Values = () => {
               </p>
             </div>
 
-            {/* Checklist */}
-
             <div className="min-w-[230px] space-y-4">
               {[
                 "Soluciones pensadas para personas",
@@ -300,25 +229,14 @@ const Values = () => {
                 <motion.div
                   key={item}
                   className="flex items-center gap-3"
-                  initial={{
-                    opacity: 0,
-                    x: 20,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    x: 0,
-                  }}
-                  transition={{
-                    delay: 0.2 + index * 0.1,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2 + index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-lime-400/10">
                     <Check className="h-4 w-4 text-lime-400" />
                   </div>
-
                   <span className="text-sm font-medium text-white/65">
                     {item}
                   </span>
@@ -328,29 +246,16 @@ const Values = () => {
           </div>
         </motion.div>
 
-        {/* =========================================================
-            FINAL STATEMENT
-        ========================================================== */}
-
         <motion.div
           className="mt-20 text-center"
-          initial={{
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          viewport={{
-            once: true,
-          }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
         >
           <p className="text-sm font-medium uppercase tracking-[0.25em] text-white/25">
             Innovar · Construir · Transformar
           </p>
-
           <div className="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-lime-400 to-transparent" />
         </motion.div>
       </div>
