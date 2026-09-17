@@ -12,10 +12,11 @@ const Header = () => {
 
   const navItems = [
     { name: "Inicio", href: "#home", id: "home" },
+    { name: "Áreas", href: "#areas", id: "areas" },
     { name: "Servicios", href: "#services", id: "services" },
+    { name: "Portafolio", href: "#gallery", id: "gallery" },
     { name: "Valores", href: "#values", id: "values" },
     { name: "Nosotros", href: "#about", id: "about" },
-    { name: "Clientes", href: "#clients", id: "clients" },
   ];
 
   useEffect(() => {
@@ -40,10 +41,11 @@ const Header = () => {
 
       const sections = [
         "home",
+        "areas",
         "services",
+        "gallery",
         "values",
         "about",
-        "clients",
         "contact",
       ];
 
@@ -93,7 +95,7 @@ const Header = () => {
         <div
           className={`transition-all duration-500 ${
             scrolled
-              ? "border-b border-white/[0.08] bg-[#05070b]/85 shadow-2xl backdrop-blur-2xl"
+              ? "border-b border-slate-200/70 bg-white/90 shadow-[0_8px_30px_rgba(15,23,42,0.05)] backdrop-blur-2xl"
               : "bg-transparent"
           }`}
         >
@@ -107,11 +109,11 @@ const Header = () => {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <div className="absolute -inset-3 rounded-2xl bg-lime-400/10 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute -inset-3 rounded-2xl bg-lime-400/20 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100" />
                 <img
-                  src="/img/logo_lime.png"
+                  src="/img/logo_limelab.png"
                   alt="LIMELAB Technologies"
-                  className="relative z-10 h-12 w-auto object-contain sm:h-14"
+                  className="relative z-10 h-11 w-auto object-contain sm:h-12"
                 />
               </motion.a>
 
@@ -123,26 +125,26 @@ const Header = () => {
                     <motion.a
                       key={item.id}
                       href={item.href}
-                      className="group relative px-4 py-2"
+                      className="group relative px-3.5 py-2"
                       initial={{ opacity: 0, y: -15 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{
-                        delay: 0.1 + index * 0.06,
+                        delay: 0.1 + index * 0.05,
                         duration: 0.4,
                       }}
                     >
                       <span
                         className={`relative z-10 text-[13px] font-semibold transition-colors duration-300 ${
                           isActive
-                            ? "text-white"
-                            : "text-white/45 group-hover:text-white"
+                            ? "text-slate-950"
+                            : "text-slate-500 group-hover:text-slate-950"
                         }`}
                       >
                         {item.name}
                       </span>
 
                       <motion.span
-                        className="absolute bottom-0 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-lime-400"
+                        className="absolute bottom-0 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-lime-500"
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{
                           opacity: isActive ? 1 : 0,
@@ -151,7 +153,7 @@ const Header = () => {
                         transition={{ duration: 0.25 }}
                       />
 
-                      <span className="absolute inset-0 rounded-xl bg-white/[0.04] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                      <span className="absolute inset-0 rounded-xl bg-lime-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     </motion.a>
                   );
                 })}
@@ -160,7 +162,7 @@ const Header = () => {
               {/* DESKTOP CTA */}
               <motion.a
                 href="#contact"
-                className="group hidden items-center gap-2 rounded-xl border border-lime-400/20 bg-lime-400/[0.08] px-4 py-2.5 text-xs font-bold text-lime-300 transition-all duration-300 hover:border-lime-400/40 hover:bg-lime-400 hover:text-black lg:flex"
+                className="group hidden items-center gap-2 rounded-xl bg-slate-950 px-5 py-2.5 text-xs font-bold text-white transition-all duration-300 hover:bg-lime-400 hover:text-slate-950 lg:flex"
                 whileHover={{ scale: 1.03, y: -1 }}
                 whileTap={{ scale: 0.97 }}
               >
@@ -174,7 +176,7 @@ const Header = () => {
                 aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
                 aria-expanded={isMenuOpen}
                 onClick={() => setIsMenuOpen((prev) => !prev)}
-                className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.05] text-white backdrop-blur-md transition-colors hover:bg-white/[0.08] lg:hidden"
+                className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-900 shadow-sm transition-colors hover:bg-lime-50 lg:hidden"
                 whileTap={{ scale: 0.92 }}
               >
                 <AnimatePresence mode="wait">
@@ -211,7 +213,7 @@ const Header = () => {
         {isMenuOpen && (
           <>
             <motion.div
-              className="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-40 bg-slate-950/30 backdrop-blur-sm lg:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -220,13 +222,13 @@ const Header = () => {
             />
 
             <motion.div
-              className="fixed left-4 right-4 top-[84px] z-50 overflow-hidden rounded-[28px] border border-white/10 bg-[#080b10]/95 shadow-2xl backdrop-blur-2xl lg:hidden"
+              className="fixed left-4 right-4 top-[84px] z-50 overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-2xl lg:hidden"
               initial={{ opacity: 0, y: -20, scale: 0.96 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.96 }}
               transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
             >
-              <div className="pointer-events-none absolute right-[-80px] top-[-80px] h-52 w-52 rounded-full bg-lime-400/10 blur-[80px]" />
+              <div className="pointer-events-none absolute right-[-80px] top-[-80px] h-52 w-52 rounded-full bg-lime-300/30 blur-[80px]" />
 
               <div className="relative p-4">
                 <nav className="space-y-1">
@@ -238,18 +240,16 @@ const Header = () => {
                         href={item.href}
                         onClick={closeMenu}
                         className={`group flex items-center justify-between rounded-2xl px-4 py-4 transition-all duration-300 ${
-                          isActive
-                            ? "bg-lime-400/[0.08]"
-                            : "hover:bg-white/[0.04]"
+                          isActive ? "bg-lime-50" : "hover:bg-slate-50"
                         }`}
                         initial={{ opacity: 0, x: -15 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.05 + index * 0.06 }}
+                        transition={{ delay: 0.05 + index * 0.05 }}
                       >
                         <div className="flex items-center gap-4">
                           <span
                             className={`text-[10px] font-bold ${
-                              isActive ? "text-lime-400" : "text-white/20"
+                              isActive ? "text-lime-600" : "text-slate-300"
                             }`}
                           >
                             0{index + 1}
@@ -257,8 +257,8 @@ const Header = () => {
                           <span
                             className={`text-sm font-semibold ${
                               isActive
-                                ? "text-white"
-                                : "text-white/50 group-hover:text-white"
+                                ? "text-slate-950"
+                                : "text-slate-500 group-hover:text-slate-950"
                             }`}
                           >
                             {item.name}
@@ -267,8 +267,8 @@ const Header = () => {
                         <ChevronDown
                           className={`h-4 w-4 -rotate-90 transition-all duration-300 ${
                             isActive
-                              ? "text-lime-400"
-                              : "text-white/15 group-hover:text-white/40"
+                              ? "text-lime-500"
+                              : "text-slate-300 group-hover:text-slate-500"
                           }`}
                         />
                       </motion.a>
@@ -276,12 +276,12 @@ const Header = () => {
                   })}
                 </nav>
 
-                <div className="my-4 h-px bg-white/[0.07]" />
+                <div className="my-4 h-px bg-slate-100" />
 
                 <motion.a
                   href="#contact"
                   onClick={closeMenu}
-                  className="group flex items-center justify-between rounded-2xl bg-lime-400 px-5 py-4 text-sm font-bold text-black"
+                  className="group flex items-center justify-between rounded-2xl bg-slate-950 px-5 py-4 text-sm font-bold text-white transition-colors hover:bg-lime-400 hover:text-slate-950"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
@@ -291,10 +291,10 @@ const Header = () => {
                 </motion.a>
 
                 <div className="flex items-center justify-between px-2 pb-1 pt-5">
-                  <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/20">
+                  <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400">
                     LIMELAB Technologies
                   </span>
-                  <span className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.15em] text-white/20">
+                  <span className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400">
                     <span className="h-1.5 w-1.5 rounded-full bg-lime-400" />
                     Online
                   </span>
