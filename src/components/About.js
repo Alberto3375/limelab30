@@ -1,177 +1,345 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Rocket, Star, Users, Heart } from "lucide-react";
+import {
+  Rocket,
+  Star,
+  Code2,
+  Heart,
+  CheckCircle2,
+  Sparkles,
+} from "lucide-react";
 
 const About = () => {
   const teamMembers = [
     {
-      name: "Alberto Mendez",
+      name: "Alberto Méndez",
       role: "Fundador & Desarrollador",
       description:
-        "Arquitecto tecnológico que convierte ideas en soluciones prácticas y funcionales.",
-      color: "from-blue-500 to-indigo-600",
+        "Desarrollo soluciones digitales combinando ingeniería, diseño y tecnología para transformar ideas en productos funcionales.",
     },
   ];
 
   const milestones = [
     {
       year: "2023",
-      title: "Primer Proyecto",
-      description: "Lanzamos nuestro primer desarrollo con éxito.",
+      title: "Primer proyecto",
+      description:
+        "Comenzamos desarrollando nuestras primeras soluciones digitales y convirtiendo ideas en productos funcionales.",
     },
     {
       year: "2024",
       title: "Consolidación",
-      description: "Segundo proyecto vendido, afianzando la confianza de los clientes.",
+      description:
+        "Nuevos proyectos y clientes nos permitieron fortalecer nuestra experiencia y metodología de trabajo.",
     },
     {
       year: "2025",
-      title: "Nuestro presente",
-      description: "Más de 2 años creando soluciones tecnológicas con pasión y dedicación.",
+      title: "Evolución",
+      description:
+        "Ampliamos nuestra propuesta hacia desarrollo web, software, automatización y soluciones tecnológicas.",
     },
+    {
+      year: "2026",
+      title: "LIMELAB",
+      description:
+        "Construimos una identidad tecnológica enfocada en crear soluciones modernas, cercanas y con propósito.",
+    },
+  ];
+
+  const principles = [
+    "Tecnología pensada para personas",
+    "Diseño funcional y experiencias claras",
+    "Soluciones escalables y mantenibles",
+    "Comunicación directa y transparente",
   ];
 
   return (
     <section
       id="about"
-      className="py-24 bg-gradient-to-br from-white via-blue-50 to-lime-50 relative overflow-hidden"
+      className="relative overflow-hidden bg-white py-24 sm:py-28 lg:py-32"
     >
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Sección de equipo */}
-        <div className="mb-24">
-          <motion.h3
-            className="text-4xl font-extrabold text-center text-gray-900 mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            Conoce a nuestro equipo
-          </motion.h3>
+      <div className="pointer-events-none absolute inset-0">
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(15,23,42,0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.35) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+        />
+        <div className="absolute -left-52 top-40 h-[500px] w-[500px] rounded-full bg-lime-300/10 blur-[140px]" />
+        <div className="absolute -right-52 bottom-0 h-[500px] w-[500px] rounded-full bg-lime-200/20 blur-[140px]" />
+      </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center">
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={index}
-                className="p-8 rounded-3xl bg-white/60 backdrop-blur-md shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 text-center"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <motion.div
-                  className={`w-28 h-28 mx-auto mb-6 rounded-full bg-gradient-to-r ${member.color} flex items-center justify-center shadow-lg`}
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                >
-                  <span className="text-4xl font-bold text-white">
-                    {member.name.charAt(0)}
-                  </span>
-                </motion.div>
-                <h4 className="text-2xl font-bold text-gray-900 mb-2">
-                  {member.name}
-                </h4>
-                <p className="text-lime-600 font-semibold mb-3">
-                  {member.role}
-                </p>
-                <p className="text-gray-600 leading-relaxed">
-                  {member.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Línea de tiempo */}
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        {/* INTRO */}
         <motion.div
-          className="mb-24"
-          initial={{ opacity: 0, y: 50 }}
+          className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-4xl font-extrabold text-center text-gray-900 mb-16">
-            Nuestra historia
-          </h3>
+          <div>
+            <div className="mb-6 flex items-center gap-3">
+              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-lime-400 text-[10px] font-black text-slate-950">
+                03
+              </span>
+              <span className="text-[10px] font-black uppercase tracking-[0.25em] text-lime-700">
+                Nosotros
+              </span>
+            </div>
 
-          <div className="relative max-w-3xl mx-auto">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-lime-500 rounded-full"></div>
+            <h2 className="text-4xl font-black tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+              Tecnología con
+              <br />
+              <span className="text-slate-300">una visión humana.</span>
+            </h2>
+          </div>
 
-            {milestones.map((milestone, index) => (
-              <motion.div
-                key={index}
-                className="relative mb-16"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div
-                  className={`flex items-center ${
-                    index % 2 === 0 ? "justify-start" : "justify-end"
-                  }`}
-                >
-                  <div className="w-[280px] bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition">
-                    <div className="text-xl font-bold text-blue-600 mb-1">
-                      {milestone.year}
-                    </div>
-                    <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                      {milestone.title}
-                    </h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {milestone.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+          <div>
+            <p className="text-base leading-8 text-slate-500 sm:text-lg">
+              LIMELAB nace con una idea sencilla: la tecnología debe resolver
+              problemas reales, ser fácil de entender y generar valor para las
+              personas que la utilizan.
+            </p>
           </div>
         </motion.div>
 
-        {/* Misión y Visión */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        {/* FOUNDER + PHILOSOPHY */}
+        <div className="mt-16 grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
           <motion.div
-            className="p-10 rounded-3xl bg-gradient-to-br from-blue-50 to-indigo-100 border border-blue-200/50 shadow-md"
-            initial={{ opacity: 0, x: -50 }}
+            className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-slate-50 p-7 sm:p-9"
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-14 h-14 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
-                <Rocket className="w-7 h-7 text-white" />
+            <div className="absolute -right-20 -top-20 h-48 w-48 rounded-full bg-lime-300/20 blur-[70px]" />
+
+            <div className="relative">
+              <div className="mb-8 flex items-center justify-between">
+                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                  Fundador
+                </span>
+                <Code2 className="h-5 w-5 text-lime-500" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Nuestra Misión</h3>
+
+              <div className="mb-7 flex h-24 w-24 items-center justify-center rounded-[28px] bg-lime-400 shadow-xl shadow-lime-200">
+                <span className="text-4xl font-black text-slate-950">A</span>
+              </div>
+
+              {teamMembers.map((member) => (
+                <div key={member.name}>
+                  <h3 className="text-2xl font-black tracking-tight text-slate-950">
+                    {member.name}
+                  </h3>
+                  <p className="mt-2 text-sm font-bold text-lime-600">
+                    {member.role}
+                  </p>
+                  <p className="mt-5 text-sm leading-7 text-slate-500">
+                    {member.description}
+                  </p>
+                </div>
+              ))}
+
+              <div className="mt-8 flex items-center gap-2 border-t border-slate-200 pt-6">
+                <span className="h-2 w-2 rounded-full bg-lime-400" />
+                <span className="text-[9px] font-black uppercase tracking-[0.18em] text-slate-400">
+                  Guadalajara · México
+                </span>
+              </div>
             </div>
-            <p className="text-gray-700 leading-relaxed">
-              Crear soluciones tecnológicas que generen impacto real en la vida
-              de las personas, integrando innovación, empatía y compromiso
-              humano.
-            </p>
           </motion.div>
 
           <motion.div
-            className="p-10 rounded-3xl bg-gradient-to-br from-lime-50 to-green-100 border border-lime-200/50 shadow-md"
-            initial={{ opacity: 0, x: 50 }}
+            className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white p-7 shadow-[0_20px_60px_rgba(15,23,42,0.05)] sm:p-9"
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-14 h-14 bg-gradient-to-r from-lime-500 to-green-600 rounded-xl flex items-center justify-center">
-                <Star className="w-7 h-7 text-white" />
+            <div className="flex flex-col justify-between gap-8 lg:h-full">
+              <div>
+                <div className="mb-5 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-lime-50">
+                    <Heart className="h-5 w-5 text-lime-600" />
+                  </div>
+                  <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                    Nuestra filosofía
+                  </span>
+                </div>
+
+                <h3 className="max-w-xl text-2xl font-black tracking-tight text-slate-950 sm:text-3xl">
+                  No hacemos tecnología por hacer tecnología.
+                </h3>
+
+                <p className="mt-5 max-w-xl text-sm leading-7 text-slate-500">
+                  Cada proyecto debe tener un propósito. Analizamos el
+                  problema, entendemos a las personas que utilizarán la
+                  solución y construimos tecnología alrededor de esa necesidad.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Nuestra Visión</h3>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                {principles.map((principle, index) => (
+                  <div
+                    key={principle}
+                    className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50 p-4"
+                  >
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-lime-600" />
+                    <div>
+                      <span className="mb-1 block text-[9px] font-black text-lime-600">
+                        0{index + 1}
+                      </span>
+                      <p className="text-xs font-bold leading-5 text-slate-600">
+                        {principle}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <p className="text-gray-700 leading-relaxed">
-              Convertirnos en un referente en Latinoamérica como una empresa de
-              tecnología cercana, confiable e innovadora que siempre pone a las
-              personas en primer lugar.
-            </p>
           </motion.div>
         </div>
-      </div>
-    </section>
-  );
-};
 
-export default About;
+        {/* TIMELINE */}
+        <motion.div
+          className="mt-24"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
+          <div className="mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+            <div>
+              <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-lime-600">
+                Nuestra trayectoria
+              </p>
+              <h3 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+                Una historia que sigue creciendo.
+              </h3>
+            </div>
+            <span className="text-xs font-bold text-slate-400">2023 — 2026</span>
+          </div>
+
+          <div className="relative">
+            <div className="absolute left-[15px] top-3 bottom-3 w-px bg-slate-200 md:left-0 md:right-0 md:top-[17px] md:h-px md:w-auto" />
+
+            <div className="grid gap-8 md:grid-cols-4 md:gap-5">
+              {milestones.map((milestone, index) => (
+                <motion.div
+                  key={milestone.year}
+                  className="relative pl-10 md:pl-0 md:pt-10"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.12, duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="absolute left-[8px] top-1 flex h-4 w-4 items-center justify-center rounded-full border-4 border-white bg-lime-400 shadow-sm md:left-0 md:top-0">
+                    <span className="h-1 w-1 rounded-full bg-slate-950" />
+                  </div>
+
+                  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-lime-200 hover:shadow-xl hover:shadow-lime-100/30">
+                    <span className="text-2xl font-black text-lime-500">
+                      {milestone.year}
+                    </span>
+                    <h4 className="mt-3 text-sm font-black text-slate-900">
+                      {milestone.title}
+                    </h4>
+                    <p className="mt-2 text-xs leading-6 text-slate-500">
+                      {milestone.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* MISSION / VISION */}
+        <div className="mt-24 grid gap-6 lg:grid-cols-2">
+          <motion.div
+            className="group relative overflow-hidden rounded-[28px] border border-slate-200 bg-slate-950 p-8 sm:p-10"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-lime-400/10 blur-[80px]" />
+
+            <div className="relative">
+              <div className="mb-8 flex items-center justify-between">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-lime-400">
+                  <Rocket className="h-6 w-6 text-slate-950" />
+                </div>
+                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/20">
+                  01 / Misión
+                </span>
+              </div>
+
+              <h3 className="text-2xl font-black text-white sm:text-3xl">
+                Crear tecnología
+                <br />
+                <span className="text-lime-400">que genere impacto.</span>
+              </h3>
+
+              <p className="mt-5 text-sm leading-7 text-white/45">
+                Crear soluciones tecnológicas que generen impacto real en la
+                vida de las personas y los negocios, integrando innovación,
+                funcionalidad y compromiso humano.
+              </p>
+
+              <div className="mt-8 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.15em] text-lime-400">
+                <span className="h-1.5 w-1.5 rounded-full bg-lime-400" />
+                Construir con propósito
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="group relative overflow-hidden rounded-[28px] border border-lime-200 bg-lime-50 p-8 sm:p-10"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <div className="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-lime-300/30 blur-[80px]" />
+
+            <div className="relative">
+              <div className="mb-8 flex items-center justify-between">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm">
+                  <Star className="h-6 w-6 text-lime-600" />
+                </div>
+                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-lime-700/40">
+                  02 / Visión
+                </span>
+              </div>
+
+              <h3 className="text-2xl font-black text-slate-950 sm:text-3xl">
+                Ser una tecnología
+                <br />
+                <span className="text-lime-600">cercana y confiable.</span>
+              </h3>
+
+              <p className="mt-5 text-sm leading-7 text-slate-600">
+                Convertirnos en un referente tecnológico por nuestra capacidad
+                de crear soluciones innovadoras, cercanas y confiables,
+                poniendo siempre a las personas en el centro.
+              </p>
+
+              <div className="mt-8 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.15em] text-lime-700">
+                <span className="h-1.5 w-1.5 rounded-full bg-lime-500" />
+                Pensar más allá
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* FINAL */}
+        <motion.div
+          className="mt-20 flex flex-col items-center text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport
