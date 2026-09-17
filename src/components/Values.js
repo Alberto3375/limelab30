@@ -1,266 +1,354 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Lightbulb,
-  HeartHandshake,
-  Target,
-  UsersRound,
-  Leaf,
+  Rocket,
+  Star,
+  Code2,
+  Heart,
+  CheckCircle2,
   Sparkles,
-  ArrowUpRight,
-  Check,
 } from "lucide-react";
 
-const Values = () => {
-  const values = [
+const About = () => {
+  const teamMembers = [
     {
-      number: "01",
-      icon: Lightbulb,
-      title: "Innovación",
-      subtitle: "Pensamos diferente",
+      name: "Alberto Méndez",
+      role: "Fundador & Desarrollador",
       description:
-        "Exploramos nuevas tecnologías, ideas y metodologías para crear soluciones que realmente generen valor.",
-      accent: "from-yellow-400 via-amber-400 to-orange-500",
-      glow: "bg-yellow-400/20",
+        "Desarrollo soluciones digitales combinando ingeniería, diseño y tecnología para transformar ideas en productos funcionales.",
+    },
+  ];
+
+  const milestones = [
+    {
+      year: "2023",
+      title: "Primer proyecto",
+      description:
+        "Comenzamos desarrollando nuestras primeras soluciones digitales.",
     },
     {
-      number: "02",
-      icon: HeartHandshake,
-      title: "Compromiso",
-      subtitle: "Construimos relaciones",
+      year: "2024",
+      title: "Consolidación",
       description:
-        "Trabajamos con responsabilidad, transparencia y cercanía para construir relaciones duraderas con nuestros clientes.",
-      accent: "from-rose-400 via-pink-500 to-red-500",
-      glow: "bg-pink-400/20",
+        "Nuevos proyectos y clientes fortalecieron nuestra metodología.",
     },
     {
-      number: "03",
-      icon: Target,
-      title: "Excelencia",
-      subtitle: "Cada detalle importa",
+      year: "2025",
+      title: "Evolución",
       description:
-        "Buscamos entregar productos y servicios de alta calidad, cuidando cada etapa del proceso y cada detalle.",
-      accent: "from-cyan-400 via-blue-500 to-indigo-600",
-      glow: "bg-blue-400/20",
+        "Ampliamos nuestra propuesta: web, software, hardware y diseño.",
     },
     {
-      number: "04",
-      icon: UsersRound,
-      title: "Cercanía",
-      subtitle: "Las personas primero",
+      year: "2026",
+      title: "LIMELAB",
       description:
-        "Escuchamos, entendemos y acompañamos a nuestros clientes para convertir sus necesidades en soluciones.",
-      accent: "from-violet-400 via-purple-500 to-fuchsia-600",
-      glow: "bg-purple-400/20",
+        "Construimos una identidad tecnológica moderna y con propósito.",
     },
-    {
-      number: "05",
-      icon: Leaf,
-      title: "Responsabilidad",
-      subtitle: "Tecnología con propósito",
-      description:
-        "Desarrollamos soluciones pensando en el impacto que generamos en las personas, las empresas y nuestro entorno.",
-      accent: "from-emerald-400 via-green-500 to-teal-600",
-      glow: "bg-emerald-400/20",
-    },
+  ];
+
+  const principles = [
+    "Tecnología pensada para personas",
+    "Diseño funcional y experiencias claras",
+    "Soluciones escalables y mantenibles",
+    "Comunicación directa y transparente",
   ];
 
   return (
     <section
-      id="values"
-      className="relative overflow-hidden bg-[#05070b] py-28 text-white"
+      id="about"
+      className="relative overflow-hidden bg-white py-24 sm:py-28 lg:py-32"
     >
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[-15%] top-[-10%] h-[500px] w-[500px] rounded-full bg-lime-400/10 blur-[140px]" />
-        <div className="absolute right-[-10%] top-[25%] h-[450px] w-[450px] rounded-full bg-cyan-500/10 blur-[150px]" />
-        <div className="absolute bottom-[-15%] left-[35%] h-[500px] w-[500px] rounded-full bg-purple-500/10 blur-[160px]" />
-
         <div
-          className="absolute inset-0 opacity-[0.035]"
+          className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px)",
-            backgroundSize: "70px 70px",
+              "linear-gradient(rgba(15,23,42,0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.35) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
           }}
         />
+        <div className="absolute -left-52 top-40 h-[500px] w-[500px] rounded-full bg-lime-300/20 blur-[140px]" />
+        <div className="absolute -right-52 bottom-0 h-[500px] w-[500px] rounded-full bg-lime-200/30 blur-[140px]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        {/* INTRO */}
         <motion.div
-          className="mx-auto mb-20 max-w-4xl text-center"
-          initial={{ opacity: 0, y: 40 }}
+          className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <motion.div
-            className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 backdrop-blur-md"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <Sparkles className="h-4 w-4 text-lime-400" />
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/70">
-              Lo que nos define
-            </span>
-          </motion.div>
-
-          <h2 className="text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-7xl">
-            Tecnología con
-            <span className="block bg-gradient-to-r from-lime-300 via-lime-400 to-emerald-400 bg-clip-text text-transparent">
-              propósito.
-            </span>
-          </h2>
-
-          <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-white/55 sm:text-lg">
-            Nuestra forma de trabajar está basada en principios que nos ayudan
-            a crear soluciones tecnológicas útiles, humanas y preparadas para
-            crecer junto con nuestros clientes.
-          </p>
-        </motion.div>
-
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {values.map((value, index) => {
-            const Icon = value.icon;
-
-            return (
-              <motion.article
-                key={value.number}
-                className={`group relative overflow-hidden rounded-[28px] border border-white/[0.08] bg-white/[0.035] p-7 backdrop-blur-xl transition-all duration-500 hover:border-white/[0.16] hover:bg-white/[0.055] ${
-                  index === 0 ? "lg:col-span-2" : ""
-                }`}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: index * 0.1 }}
-                viewport={{ once: true, margin: "-80px" }}
-                whileHover={{ y: -8 }}
-              >
-                <div
-                  className={`pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full ${value.glow} opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100`}
-                />
-
-                <div className="relative z-10 flex items-start justify-between">
-                  <div
-                    className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${value.accent} shadow-lg`}
-                  >
-                    <Icon className="h-7 w-7 text-white" />
-                  </div>
-
-                  <span className="text-sm font-bold tracking-widest text-white/20 transition-colors duration-300 group-hover:text-white/40">
-                    {value.number}
-                  </span>
-                </div>
-
-                <div className="relative z-10 mt-8">
-                  <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-lime-400">
-                    {value.subtitle}
-                  </p>
-                  <h3 className="text-2xl font-bold tracking-tight text-white">
-                    {value.title}
-                  </h3>
-                  <p className="mt-4 max-w-xl text-sm leading-7 text-white/50">
-                    {value.description}
-                  </p>
-                </div>
-
-                <div className="relative z-10 mt-8 flex items-center justify-between border-t border-white/[0.07] pt-5">
-                  <div className="flex items-center gap-2 text-xs font-semibold text-white/30">
-                    <span
-                      className={`h-1.5 w-1.5 rounded-full bg-gradient-to-r ${value.accent}`}
-                    />
-                    LIMELAB Technologies
-                  </div>
-
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-white/30 transition-all duration-300 group-hover:border-lime-400/40 group-hover:text-lime-400">
-                    <ArrowUpRight className="h-4 w-4" />
-                  </div>
-                </div>
-
-                <div
-                  className={`absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r ${value.accent} transition-all duration-500 group-hover:w-full`}
-                />
-              </motion.article>
-            );
-          })}
-        </div>
-
-        {/* PHILOSOPHY */}
-        <motion.div
-          className="relative mt-24 overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.035] p-8 backdrop-blur-xl sm:p-12 lg:p-16"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="pointer-events-none absolute right-[-100px] top-[-100px] h-72 w-72 rounded-full bg-lime-400/10 blur-[100px]" />
-
-          <div className="relative z-10 grid items-center gap-12 lg:grid-cols-[1fr_auto]">
-            <div className="max-w-3xl">
-              <div className="mb-5 flex items-center gap-3">
-                <div className="h-px w-10 bg-lime-400" />
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-lime-400">
-                  Nuestra filosofía
-                </span>
-              </div>
-
-              <h3 className="text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
-                No solo hacemos tecnología.
-                <span className="block text-white/35">
-                  Creamos soluciones que tienen sentido.
-                </span>
-              </h3>
-
-              <p className="mt-6 max-w-2xl text-base leading-8 text-white/50">
-                En LIMELAB creemos que la tecnología debe resolver problemas
-                reales. Por eso combinamos creatividad, experiencia técnica y
-                una visión centrada en las personas para transformar ideas en
-                soluciones funcionales.
-              </p>
+          <div>
+            <div className="mb-6 flex items-center gap-3">
+              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-lime-400 text-[10px] font-black text-slate-950">
+                05
+              </span>
+              <span className="text-[10px] font-black uppercase tracking-[0.25em] text-lime-700">
+                Nosotros
+              </span>
             </div>
 
-            <div className="min-w-[230px] space-y-4">
-              {[
-                "Soluciones pensadas para personas",
-                "Tecnología preparada para crecer",
-                "Diseño y funcionalidad",
-                "Acompañamiento cercano",
-              ].map((item, index) => (
+            <h2 className="text-4xl font-black tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+              Tecnología con
+              <br />
+              <span className="text-slate-300">una visión humana.</span>
+            </h2>
+          </div>
+
+          <div>
+            <p className="text-base leading-8 text-slate-600 sm:text-lg">
+              LIMELAB nace con una idea sencilla: la tecnología debe resolver
+              problemas reales, ser fácil de entender y generar valor para las
+              personas que la utilizan.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* FOUNDER + PHILOSOPHY */}
+        <div className="mt-16 grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
+          <motion.div
+            className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-slate-50 p-7 sm:p-9"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <div className="absolute -right-20 -top-20 h-48 w-48 rounded-full bg-lime-300/40 blur-[70px]" />
+
+            <div className="relative">
+              <div className="mb-8 flex items-center justify-between">
+                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                  Fundador
+                </span>
+                <Code2 className="h-5 w-5 text-lime-600" />
+              </div>
+
+              <div className="mb-7 flex h-24 w-24 items-center justify-center rounded-[28px] bg-gradient-to-br from-lime-400 via-lime-500 to-emerald-500 shadow-xl shadow-lime-200">
+                <span className="text-4xl font-black text-white">A</span>
+              </div>
+
+              {teamMembers.map((member) => (
+                <div key={member.name}>
+                  <h3 className="text-2xl font-black tracking-tight text-slate-950">
+                    {member.name}
+                  </h3>
+                  <p className="mt-2 text-sm font-bold text-lime-600">
+                    {member.role}
+                  </p>
+                  <p className="mt-5 text-sm leading-7 text-slate-500">
+                    {member.description}
+                  </p>
+                </div>
+              ))}
+
+              <div className="mt-8 flex items-center gap-2 border-t border-slate-200 pt-6">
+                <span className="h-2 w-2 rounded-full bg-lime-500" />
+                <span className="text-[9px] font-black uppercase tracking-[0.18em] text-slate-400">
+                  Guadalajara · México
+                </span>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white p-7 shadow-[0_20px_60px_rgba(15,23,42,0.05)] sm:p-9"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex flex-col justify-between gap-8 lg:h-full">
+              <div>
+                <div className="mb-5 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-lime-100">
+                    <Heart className="h-5 w-5 text-lime-600" />
+                  </div>
+                  <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                    Nuestra filosofía
+                  </span>
+                </div>
+
+                <h3 className="max-w-xl text-2xl font-black tracking-tight text-slate-950 sm:text-3xl">
+                  No hacemos tecnología por hacer tecnología.
+                </h3>
+
+                <p className="mt-5 max-w-xl text-sm leading-7 text-slate-500">
+                  Cada proyecto debe tener un propósito. Analizamos el problema,
+                  entendemos a las personas que utilizarán la solución y
+                  construimos tecnología alrededor de esa necesidad.
+                </p>
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                {principles.map((principle, index) => (
+                  <div
+                    key={principle}
+                    className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50 p-4"
+                  >
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-lime-600" />
+                    <div>
+                      <span className="mb-1 block text-[9px] font-black text-lime-600">
+                        0{index + 1}
+                      </span>
+                      <p className="text-xs font-bold leading-5 text-slate-600">
+                        {principle}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* TIMELINE */}
+        <motion.div
+          className="mt-24"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
+          <div className="mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+            <div>
+              <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-lime-600">
+                Nuestra trayectoria
+              </p>
+              <h3 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+                Una historia que sigue creciendo.
+              </h3>
+            </div>
+            <span className="text-xs font-bold text-slate-400">
+              2023 — 2026
+            </span>
+          </div>
+
+          <div className="relative">
+            <div className="absolute left-[15px] top-3 bottom-3 w-px bg-slate-200 md:left-0 md:right-0 md:top-[17px] md:h-px md:w-auto" />
+
+            <div className="grid gap-8 md:grid-cols-4 md:gap-5">
+              {milestones.map((milestone, index) => (
                 <motion.div
-                  key={item}
-                  className="flex items-center gap-3"
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 + index * 0.1 }}
+                  key={milestone.year}
+                  className="relative pl-10 md:pl-0 md:pt-10"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.12, duration: 0.6 }}
                   viewport={{ once: true }}
                 >
-                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-lime-400/10">
-                    <Check className="h-4 w-4 text-lime-400" />
+                  <div className="absolute left-[8px] top-1 flex h-4 w-4 items-center justify-center rounded-full border-4 border-white bg-lime-400 shadow-sm md:left-0 md:top-0">
+                    <span className="h-1 w-1 rounded-full bg-slate-950" />
                   </div>
-                  <span className="text-sm font-medium text-white/65">
-                    {item}
-                  </span>
+
+                  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-lime-300 hover:shadow-xl hover:shadow-lime-100/40">
+                    <span className="text-2xl font-black text-lime-500">
+                      {milestone.year}
+                    </span>
+                    <h4 className="mt-3 text-sm font-black text-slate-900">
+                      {milestone.title}
+                    </h4>
+                    <p className="mt-2 text-xs leading-6 text-slate-500">
+                      {milestone.description}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </div>
           </div>
         </motion.div>
 
+        {/* MISSION / VISION */}
+        <div className="mt-24 grid gap-6 lg:grid-cols-2">
+          <motion.div
+            className="group relative overflow-hidden rounded-[28px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.06)] sm:p-10"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-lime-300/40 blur-[80px]" />
+
+            <div className="relative">
+              <div className="mb-8 flex items-center justify-between">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime-400 via-lime-500 to-emerald-500 shadow-lg shadow-lime-200">
+                  <Rocket className="h-6 w-6 text-white" />
+                </div>
+                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-300">
+                  01 / Misión
+                </span>
+              </div>
+
+              <h3 className="text-2xl font-black text-slate-950 sm:text-3xl">
+                Crear tecnología
+                <br />
+                <span className="text-lime-600">que genere impacto.</span>
+              </h3>
+
+              <p className="mt-5 text-sm leading-7 text-slate-500">
+                Crear soluciones tecnológicas que generen impacto real en la
+                vida de las personas y los negocios, integrando innovación,
+                funcionalidad y compromiso humano.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="group relative overflow-hidden rounded-[28px] border border-lime-200 bg-lime-50 p-8 sm:p-10"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <div className="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-lime-300/60 blur-[80px]" />
+
+            <div className="relative">
+              <div className="mb-8 flex items-center justify-between">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm">
+                  <Star className="h-6 w-6 text-lime-600" />
+                </div>
+                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-lime-700/40">
+                  02 / Visión
+                </span>
+              </div>
+
+              <h3 className="text-2xl font-black text-slate-950 sm:text-3xl">
+                Ser una tecnología
+                <br />
+                <span className="text-lime-600">cercana y confiable.</span>
+              </h3>
+
+              <p className="mt-5 text-sm leading-7 text-slate-600">
+                Convertirnos en un referente tecnológico por nuestra capacidad
+                de crear soluciones innovadoras, cercanas y confiables,
+                poniendo siempre a las personas en el centro.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* FINAL */}
         <motion.div
-          className="mt-20 text-center"
+          className="mt-20 flex flex-col items-center text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-white/25">
+          <div className="mb-5 flex items-center gap-3">
+            <span className="h-px w-10 bg-lime-500" />
+            <Sparkles className="h-4 w-4 text-lime-500" />
+            <span className="h-px w-10 bg-lime-500" />
+          </div>
+
+          <p className="text-xs font-black uppercase tracking-[0.3em] text-slate-300 sm:text-sm">
             Innovar · Construir · Transformar
           </p>
-          <div className="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-lime-400 to-transparent" />
         </motion.div>
       </div>
     </section>
   );
 };
 
-export default Values;
+export default About;
