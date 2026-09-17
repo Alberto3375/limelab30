@@ -29,15 +29,11 @@ const Contact = () => {
   });
 
   const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     setStatus({
       submitting: true,
       submitted: false,
@@ -67,11 +63,9 @@ const Contact = () => {
         error: false,
         errorMessage: "",
       });
-
       setFormData({ name: "", email: "", company: "", message: "" });
     } catch (error) {
       console.error("Error:", error);
-
       setStatus({
         submitting: false,
         submitted: false,
@@ -113,7 +107,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-white py-24 sm:py-28 lg:py-32"
+      className="relative overflow-hidden bg-slate-50 py-24 sm:py-28 lg:py-32"
     >
       <div className="pointer-events-none absolute inset-0">
         <div
@@ -124,8 +118,8 @@ const Contact = () => {
             backgroundSize: "60px 60px",
           }}
         />
-        <div className="absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-lime-300/10 blur-[130px]" />
-        <div className="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-lime-200/20 blur-[130px]" />
+        <div className="absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-lime-300/20 blur-[130px]" />
+        <div className="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-lime-200/30 blur-[130px]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
@@ -137,7 +131,7 @@ const Contact = () => {
           transition={{ duration: 0.7 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-lime-200 bg-lime-50 px-4 py-2">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-lime-200 bg-white px-4 py-2 shadow-sm">
             <Sparkles className="h-4 w-4 text-lime-600" />
             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-lime-700">
               Hablemos
@@ -152,14 +146,13 @@ const Contact = () => {
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
             Cuéntanos sobre tu proyecto, necesidad o idea. Diseñamos soluciones
             tecnológicas pensadas para resolver problemas reales y generar
             resultados.
           </p>
         </motion.div>
 
-        {/* GRID */}
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
           {/* LEFT */}
           <motion.div
@@ -189,10 +182,9 @@ const Contact = () => {
             <div className="space-y-3">
               {contactInfo.map((info) => {
                 const Icon = info.icon;
-
                 const content = (
                   <>
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-lime-200 bg-lime-50 transition-all duration-300 group-hover:bg-lime-400 group-hover:text-slate-950">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-lime-200 bg-lime-50 transition-all duration-300 group-hover:bg-lime-400">
                       <Icon className="h-5 w-5 text-lime-600 transition-colors duration-300 group-hover:text-slate-950" />
                     </div>
 
@@ -205,11 +197,9 @@ const Contact = () => {
                           {info.title}
                         </p>
                       </div>
-
                       <p className="truncate text-sm font-bold text-slate-800">
                         {info.value}
                       </p>
-
                       <p className="mt-1 text-xs text-slate-400">
                         {info.description}
                       </p>
@@ -225,14 +215,14 @@ const Contact = () => {
                   <a
                     key={info.title}
                     href={info.href}
-                    className="group flex items-center gap-4 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-lime-200 hover:shadow-xl hover:shadow-lime-100/40"
+                    className="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-lime-300 hover:shadow-xl hover:shadow-lime-100/50"
                   >
                     {content}
                   </a>
                 ) : (
                   <div
                     key={info.title}
-                    className="group flex items-center gap-4 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-lime-200 hover:shadow-xl hover:shadow-lime-100/40"
+                    className="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-lime-300 hover:shadow-xl hover:shadow-lime-100/50"
                   >
                     {content}
                   </div>
@@ -251,7 +241,6 @@ const Contact = () => {
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-lime-400">
                   <Clock className="h-5 w-5 text-slate-900" />
                 </div>
-
                 <div>
                   <h4 className="text-sm font-black text-slate-900">
                     Tiempo de respuesta
@@ -273,7 +262,7 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_20px_70px_rgba(15,23,42,0.08)] sm:p-8 lg:p-10">
-              <div className="pointer-events-none absolute -right-20 -top-20 h-52 w-52 rounded-full bg-lime-300/10 blur-[80px]" />
+              <div className="pointer-events-none absolute -right-20 -top-20 h-52 w-52 rounded-full bg-lime-300/30 blur-[80px]" />
 
               <div className="relative">
                 <div className="mb-8">
@@ -286,8 +275,7 @@ const Contact = () => {
                         Cuéntanos tu proyecto
                       </h3>
                     </div>
-
-                    <div className="hidden h-10 w-10 items-center justify-center rounded-xl bg-lime-50 sm:flex">
+                    <div className="hidden h-10 w-10 items-center justify-center rounded-xl bg-lime-100 sm:flex">
                       <MessageCircle className="h-5 w-5 text-lime-600" />
                     </div>
                   </div>
@@ -327,7 +315,11 @@ const Contact = () => {
                         className="relative mb-7 flex h-20 w-20 items-center justify-center rounded-full bg-lime-100"
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
-                        transition={{ type: "spring", stiffness: 180, delay: 0.1 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 180,
+                          delay: 0.1,
+                        }}
                       >
                         <div className="absolute inset-0 animate-ping rounded-full bg-lime-200 opacity-50" />
                         <CheckCircle className="relative h-10 w-10 text-lime-600" />
@@ -438,8 +430,12 @@ const Contact = () => {
                         type="submit"
                         disabled={status.submitting}
                         className="group flex w-full items-center justify-center gap-3 rounded-xl bg-slate-950 px-6 py-4 text-sm font-black text-white shadow-lg transition-all duration-300 hover:bg-lime-400 hover:text-slate-950 hover:shadow-xl hover:shadow-lime-200 disabled:cursor-not-allowed disabled:opacity-60"
-                        whileHover={!status.submitting ? { y: -2 } : undefined}
-                        whileTap={!status.submitting ? { scale: 0.98 } : undefined}
+                        whileHover={
+                          !status.submitting ? { y: -2 } : undefined
+                        }
+                        whileTap={
+                          !status.submitting ? { scale: 0.98 } : undefined
+                        }
                       >
                         {status.submitting ? (
                           <>
