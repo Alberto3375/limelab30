@@ -248,4 +248,137 @@ const Gallery = () => {
 
                 {/* Content */}
                 <div className="p-5">
-                 
+                  <h3 className="text-base font-black text-slate-950">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 line-clamp-2 text-xs leading-6 text-slate-500">
+                    {item.description}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {item.tags.slice(0, 2).map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-[9px] font-bold text-slate-500"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-4">
+                    <span className="text-[10px] font-black uppercase tracking-[0.15em] text-lime-600">
+                      Ver detalle
+                    </span>
+                    <ArrowUpRight className="h-4 w-4 text-slate-400 transition-all duration-300 group-hover:text-lime-500" />
+                  </div>
+                </div>
+              </motion.button>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+
+        {/* Empty state */}
+        {filteredItems.length === 0 && (
+          <div className="mt-12 flex flex-col items-center gap-3 text-center">
+            <ImageIcon className="h-10 w-10 text-slate-300" />
+            <p className="text-sm text-slate-400">
+              Aún no hay proyectos en esta categoría.
+            </p>
+          </div>
+        )}
+      </div>
+
+      {/* MODAL */}
+      <AnimatePresence>
+        {selectedItem && (
+          <motion.div
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-md sm:p-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedItem(null)}
+          >
+            <motion.div
+              className="relative max-h-[92vh] w-full max-w-4xl overflow-y-auto rounded-[28px] bg-white shadow-2xl"
+              initial={{ opacity: 0, y: 30, scale: 0.96 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 30, scale: 0.96 }}
+              transition={{ duration: 0.35 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                type="button"
+                onClick={() => setSelectedItem(null)}
+                aria-label="Cerrar"
+                className="absolute right-5 top-5 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-slate-950/60 text-white backdrop-blur-md transition-all hover:bg-lime-400 hover:text-slate-950"
+              >
+                <X className="h-5 w-5" />
+              </button>
+
+              <div className="relative aspect-video overflow-hidden bg-slate-950">
+                {selectedItem.type === "video" ? (
+                  <video
+                    src={selectedItem.src}
+                    poster={selectedItem.poster}
+                    controls
+                    autoPlay
+                    className="h-full w-full object-contain"
+                  />
+                ) : (
+                  <img
+                    src={selectedItem.src}
+                    alt={selectedItem.title}
+                    className="h-full w-full object-contain"
+                  />
+                )}
+              </div>
+
+              <div className="p-6 sm:p-8">
+                <p className="mb-2 text-[10px] font-black uppercase tracking-[0.2em] text-lime-600">
+                  {selectedItem.category === "web"
+                    ? "Web & Software"
+                    : selectedItem.category === "invitaciones"
+                    ? "Invitación Digital"
+                    : "PC Gamer & Hardware"}
+                </p>
+
+                <h3 className="text-2xl font-black text-slate-950 sm:text-3xl">
+                  {selectedItem.title}
+                </h3>
+
+                <p className="mt-4 text-sm leading-7 text-slate-500">
+                  {selectedItem.description}
+                </p>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {selectedItem.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold text-slate-600"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-8">
+                  <a
+                    href="#contact"
+                    onClick={() => setSelectedItem(null)}
+                    className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-slate-950 px-5 py-3.5 text-xs font-black text-white transition-all duration-300 hover:bg-lime-400 hover:text-slate-950 sm:w-auto"
+                  >
+                    Quiero algo parecido
+                    <ExternalLink className="h-4 w-4 transition-transform group-hover:rotate-45" />
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
+  );
+};
+
+export default Gallery;
