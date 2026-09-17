@@ -1246,3 +1246,75 @@ button, input, textarea, select { font: inherit; }
   .gallery-modal-content { border-radius: 14px; }
   .gallery-close { top: 10px; right: 10px; width: 38px; height: 38px; }
 }
+/* ============================================================
+   LANGUAGE SWITCHER
+============================================================ */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lang-switch {
+  display: flex;
+  background: #ffffff15;
+  border: 1px solid #ffffff20;
+  border-radius: 100px;
+  padding: 3px;
+  gap: 2px;
+  backdrop-filter: blur(10px);
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 0;
+  padding: 7px 12px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #a7b1ad;
+  cursor: pointer;
+  transition: all .25s ease;
+  font-family: var(--font-body);
+}
+.lang-btn:hover { color: #fff; }
+.lang-btn.active {
+  background: var(--lime);
+  color: var(--ink);
+  box-shadow: 0 4px 12px #b8ff3d33;
+}
+.lang-btn .flag {
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* Cuando el header NO está scrolled (fondo claro en hero) */
+.header:not(.scrolled) .lang-switch {
+  background: #ffffffcc;
+  border-color: #dfe4df;
+}
+.header:not(.scrolled) .lang-btn { color: #65706b; }
+.header:not(.scrolled) .lang-btn:hover { color: #111416; }
+.header:not(.scrolled) .lang-btn.active {
+  background: var(--ink);
+  color: var(--lime);
+}
+
+/* ============================================================
+   AJUSTES RESPONSIVE DEL NAV-RIGHT
+============================================================ */
+@media (max-width: 900px) {
+  .nav-right { gap: 10px; }
+  .lang-btn {
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+  .lang-btn .flag { font-size: 11px; }
+}
+
+@media (max-width: 400px) {
+  .lang-btn span:not(.flag) { display: none; }
+}
