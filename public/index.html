@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="LIMELAB Technologies — Desarrollo web, software, PC Gamer, mantenimiento de hardware e invitaciones digitales.">
-  <title>LIMELAB Technologies | Tecnología con propósito</title>
+  <title data-i18n="meta.title">LIMELAB Technologies | Tecnología con propósito</title>
 
-   <link rel="icon" type="image/png" href="https://limelab30.vercel.app/img/logo_lime.png">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="https://limelab30.vercel.app/img/logo_lime.png">
   <link rel="apple-touch-icon" href="https://limelab30.vercel.app/img/logo_lime.png">
   <meta name="theme-color" content="#b8ff3d">
+
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -28,17 +31,29 @@
         <span>LIMELAB<small>TECHNOLOGIES</small></span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+      <div class="nav-right">
+        <!-- LANGUAGE SWITCHER -->
+        <div class="lang-switch" id="langSwitch">
+          <button class="lang-btn active" data-lang="es" aria-label="Español">
+            <span class="flag">🇲🇽</span> ES
+          </button>
+          <button class="lang-btn" data-lang="en" aria-label="English">
+            <span class="flag">🇺🇸</span> EN
+          </button>
+        </div>
 
-      <div class="nav-links" id="navLinks">
-        <a href="#home">Inicio</a>
-        <a href="#services">Servicios</a>
-        <a href="#portfolio">Portafolio</a>
-        <a href="#values">Valores</a>
-        <a href="#about">Nosotros</a>
-        <a href="#contact" class="nav-cta">Hablemos <i class="fa-solid fa-arrow-right"></i></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#home" data-i18n="nav.home">Inicio</a>
+          <a href="#services" data-i18n="nav.services">Servicios</a>
+          <a href="#portfolio" data-i18n="nav.portfolio">Portafolio</a>
+          <a href="#values" data-i18n="nav.values">Valores</a>
+          <a href="#about" data-i18n="nav.about">Nosotros</a>
+          <a href="#contact" class="nav-cta" data-i18n="nav.cta">Hablemos <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
       </div>
     </nav>
   </header>
@@ -52,24 +67,26 @@
 
       <div class="container hero-content">
         <div class="hero-copy reveal">
-          <div class="eyebrow"><span></span> Tecnología hecha con propósito</div>
-          <h1>Ideas que se convierten en <em>experiencias digitales.</em></h1>
-          <p class="hero-text">
+          <div class="eyebrow"><span></span> <span data-i18n="hero.eyebrow">Tecnología hecha con propósito</span></div>
+          <h1 data-i18n-html="hero.title">Ideas que se convierten en <em>experiencias digitales.</em></h1>
+          <p class="hero-text" data-i18n="hero.text">
             En LIMELAB creamos software, sitios web, invitaciones digitales y damos
             mantenimiento a PCs Gamer. Todo lo tecnológico que necesitas, en un solo lugar.
           </p>
 
           <div class="hero-actions">
-            <a href="#services" class="btn btn-primary">Explorar servicios <i class="fa-solid fa-arrow-down"></i></a>
-            <a href="https://wa.me/523324464894?text=Hola%20LIMELAB,%20me%20gustaría%20conocer%20sus%20servicios." target="_blank" rel="noopener" class="btn btn-ghost">
+            <a href="#services" class="btn btn-primary">
+              <span data-i18n="hero.cta1">Explorar servicios</span> <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="https://wa.me/523332250942?text=Hola%20LIMELAB,%20me%20gustaría%20conocer%20sus%20servicios." target="_blank" rel="noopener" class="btn btn-ghost">
               <i class="fa-brands fa-whatsapp"></i> WhatsApp
             </a>
           </div>
 
           <div class="hero-proof">
-            <div><strong>∞</strong><span>Ideas<br>sin límites</span></div>
-            <div><strong>03</strong><span>Áreas<br>de servicio</span></div>
-            <div><strong>100%</strong><span>Compromiso<br>personal</span></div>
+            <div><strong>∞</strong><span data-i18n-html="hero.proof1">Ideas<br>sin límites</span></div>
+            <div><strong>03</strong><span data-i18n-html="hero.proof2">Áreas<br>de servicio</span></div>
+            <div><strong>100%</strong><span data-i18n-html="hero.proof3">Compromiso<br>personal</span></div>
           </div>
         </div>
 
@@ -81,26 +98,32 @@
             </div>
             <div class="code-lines">
               <span><b>01</b> <i>&lt;idea&gt;</i></span>
-              <span><b>02</b> &nbsp; desarrollar_web();</span>
-              <span><b>03</b> &nbsp; mantenimiento_pc();</span>
-              <span><b>04</b> &nbsp; crear_invitacion();</span>
-              <span><b>05</b> &nbsp; <strong>crear_impacto();</strong></span>
+              <span><b>02</b> &nbsp; build_website();</span>
+              <span><b>03</b> &nbsp; pc_maintenance();</span>
+              <span><b>04</b> &nbsp; create_invitation();</span>
+              <span><b>05</b> &nbsp; <strong>create_impact();</strong></span>
               <span><b>06</b> <i>&lt;/idea&gt;</i></span>
             </div>
             <div class="terminal-status">
-              <span class="status-dot"></span> Sistema listo
+              <span class="status-dot"></span> <span data-i18n="hero.status">Sistema listo</span>
               <span class="status-right">LIMELAB_01</span>
             </div>
           </div>
 
           <div class="floating-card float-one">
             <i class="fa-solid fa-wand-magic-sparkles"></i>
-            <div><strong>Web & Software</strong><small>soluciones a medida</small></div>
+            <div>
+              <strong data-i18n="hero.float1.title">Web & Software</strong>
+              <small data-i18n="hero.float1.sub">soluciones a medida</small>
+            </div>
           </div>
 
           <div class="floating-card float-two">
             <i class="fa-solid fa-bolt"></i>
-            <div><strong>PC Gamer</strong><small>mantenimiento pro</small></div>
+            <div>
+              <strong data-i18n="hero.float2.title">PC Gamer</strong>
+              <small data-i18n="hero.float2.sub">mantenimiento pro</small>
+            </div>
           </div>
         </div>
       </div>
@@ -110,26 +133,28 @@
     <div class="marquee">
       <div class="marquee-track">
         <span>WEB</span><i>✦</i><span>SOFTWARE</span><i>✦</i><span>PC GAMER</span><i>✦</i>
-        <span>MANTENIMIENTO</span><i>✦</i><span>INVITACIONES DIGITALES</span><i>✦</i>
-        <span>AUTOMATIZACIÓN</span><i>✦</i><span>IA</span><i>✦</i>
+        <span>MAINTENANCE</span><i>✦</i><span>DIGITAL INVITATIONS</span><i>✦</i>
+        <span>AUTOMATION</span><i>✦</i><span>AI</span><i>✦</i>
         <span>WEB</span><i>✦</i><span>SOFTWARE</span><i>✦</i><span>PC GAMER</span><i>✦</i>
-        <span>MANTENIMIENTO</span><i>✦</i><span>INVITACIONES DIGITALES</span><i>✦</i>
-        <span>AUTOMATIZACIÓN</span><i>✦</i><span>IA</span><i>✦</i>
+        <span>MAINTENANCE</span><i>✦</i><span>DIGITAL INVITATIONS</span><i>✦</i>
+        <span>AUTOMATION</span><i>✦</i><span>AI</span><i>✦</i>
       </div>
     </div>
 
     <!-- ==================== INTRO ==================== -->
     <section class="intro section" id="story">
       <div class="container intro-grid">
-        <div class="section-label reveal">01 / Lo que hacemos</div>
+        <div class="section-label reveal" data-i18n="intro.label">01 / Lo que hacemos</div>
         <div class="intro-copy reveal">
-          <h2>No hacemos tecnología por hacerla.<br><span>La hacemos para resolver.</span></h2>
-          <p>
+          <h2 data-i18n-html="intro.title">
+            No hacemos tecnología por hacerla.<br><span>La hacemos para resolver.</span>
+          </h2>
+          <p data-i18n="intro.p1">
             LIMELAB nace de una idea sencilla: la tecnología puede ser poderosa sin dejar
             de ser humana. Diseñamos soluciones digitales pensando primero en las personas,
             sus problemas y sus objetivos.
           </p>
-          <p>
+          <p data-i18n="intro.p2">
             Desde una invitación digital para un momento especial, hasta el desarrollo de
             un sitio web empresarial o el mantenimiento completo de tu PC Gamer; cada
             proyecto recibe la misma atención: entender, crear, probar y entregar algo
@@ -139,203 +164,281 @@
       </div>
     </section>
 
-    <!-- ==================== SERVICES CON TABS ==================== -->
+    <!-- ==================== SERVICES ==================== -->
     <section class="services section dark-section" id="services">
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <div class="section-label light">02 / Servicios</div>
-            <h2>Todo lo digital,<br><span>en un solo lugar.</span></h2>
+            <div class="section-label light" data-i18n="services.label">02 / Servicios</div>
+            <h2 data-i18n-html="services.title">Todo lo digital,<br><span>en un solo lugar.</span></h2>
           </div>
-          <p>Elige una categoría y descubre todo lo que podemos hacer por ti.</p>
+          <p data-i18n="services.sub">Elige una categoría y descubre todo lo que podemos hacer por ti.</p>
         </div>
 
         <!-- TABS -->
         <div class="service-tabs reveal" id="serviceTabs">
           <button class="tab active" data-tab="web">
-            <i class="fa-solid fa-code"></i> Web & Software
+            <i class="fa-solid fa-code"></i> <span data-i18n="services.tab1">Web & Software</span>
           </button>
           <button class="tab" data-tab="hardware">
-            <i class="fa-solid fa-microchip"></i> PC Gamer & Hardware
+            <i class="fa-solid fa-microchip"></i> <span data-i18n="services.tab2">PC Gamer & Hardware</span>
           </button>
           <button class="tab" data-tab="invitaciones">
-            <i class="fa-solid fa-heart"></i> Invitaciones Digitales
+            <i class="fa-solid fa-heart"></i> <span data-i18n="services.tab3">Invitaciones Digitales</span>
           </button>
         </div>
 
-        <!-- PANEL: WEB & SOFTWARE -->
+        <!-- PANEL WEB -->
         <div class="service-panel active" data-panel="web">
           <div class="service-grid">
             <article class="service-card featured reveal">
               <div class="service-number">01</div>
               <div class="service-icon"><i class="fa-solid fa-code"></i></div>
-              <h3>Software a medida</h3>
-              <p>Sistemas y herramientas construidas alrededor de la forma real en que trabaja tu negocio.</p>
-              <ul><li>Aplicaciones empresariales</li><li>Dashboards</li><li>Integraciones</li><li>APIs y automatizaciones</li></ul>
-              <a href="#contact">Quiero una solución <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="web.s1.title">Software a medida</h3>
+              <p data-i18n="web.s1.desc">Sistemas y herramientas construidas alrededor de la forma real en que trabaja tu negocio.</p>
+              <ul>
+                <li data-i18n="web.s1.f1">Aplicaciones empresariales</li>
+                <li data-i18n="web.s1.f2">Dashboards</li>
+                <li data-i18n="web.s1.f3">Integraciones</li>
+                <li data-i18n="web.s1.f4">APIs y automatizaciones</li>
+              </ul>
+              <a href="#contact"><span data-i18n="web.s1.cta">Quiero una solución</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
 
             <article class="service-card reveal">
               <div class="service-number">02</div>
               <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
-              <h3>Web & e-commerce</h3>
-              <p>Experiencias web modernas, rápidas, responsivas y diseñadas para convertir visitas en oportunidades.</p>
-              <ul><li>Landing pages</li><li>Web corporativa</li><li>Catálogos</li><li>Tiendas online</li></ul>
-              <a href="#contact">Crear mi sitio <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="web.s2.title">Web & e-commerce</h3>
+              <p data-i18n="web.s2.desc">Experiencias web modernas, rápidas, responsivas y diseñadas para convertir visitas en oportunidades.</p>
+              <ul>
+                <li data-i18n="web.s2.f1">Landing pages</li>
+                <li data-i18n="web.s2.f2">Web corporativa</li>
+                <li data-i18n="web.s2.f3">Catálogos</li>
+                <li data-i18n="web.s2.f4">Tiendas online</li>
+              </ul>
+              <a href="#contact"><span data-i18n="web.s2.cta">Crear mi sitio</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
 
             <article class="service-card reveal">
               <div class="service-number">03</div>
               <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-              <h3>Aplicaciones móviles</h3>
-              <p>Apps para conectar servicios, clientes y procesos desde cualquier lugar.</p>
-              <ul><li>Apps híbridas</li><li>Apps empresariales</li><li>Paneles administrativos</li><li>Integraciones</li></ul>
-              <a href="#contact">Crear una app <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="web.s3.title">Aplicaciones móviles</h3>
+              <p data-i18n="web.s3.desc">Apps para conectar servicios, clientes y procesos desde cualquier lugar.</p>
+              <ul>
+                <li data-i18n="web.s3.f1">Apps híbridas</li>
+                <li data-i18n="web.s3.f2">Apps empresariales</li>
+                <li data-i18n="web.s3.f3">Paneles administrativos</li>
+                <li data-i18n="web.s3.f4">Integraciones</li>
+              </ul>
+              <a href="#contact"><span data-i18n="web.s3.cta">Crear una app</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
 
             <article class="service-card reveal">
               <div class="service-number">04</div>
               <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
-              <h3>IA & automatización</h3>
-              <p>Menos tareas repetitivas. Más tiempo para lo que realmente importa.</p>
-              <ul><li>IA aplicada</li><li>WhatsApp</li><li>Flujos automáticos</li><li>Procesamiento de datos</li></ul>
-              <a href="#contact">Automatizar <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="web.s4.title">IA & automatización</h3>
+              <p data-i18n="web.s4.desc">Menos tareas repetitivas. Más tiempo para lo que realmente importa.</p>
+              <ul>
+                <li data-i18n="web.s4.f1">IA aplicada</li>
+                <li data-i18n="web.s4.f2">WhatsApp</li>
+                <li data-i18n="web.s4.f3">Flujos automáticos</li>
+                <li data-i18n="web.s4.f4">Procesamiento de datos</li>
+              </ul>
+              <a href="#contact"><span data-i18n="web.s4.cta">Automatizar</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
 
             <article class="service-card reveal">
               <div class="service-number">05</div>
               <div class="service-icon"><i class="fa-solid fa-diagram-project"></i></div>
-              <h3>Odoo & ERP</h3>
-              <p>Digitalización de procesos comerciales y operativos con Odoo adaptado a cada empresa.</p>
-              <ul><li>CRM y Ventas</li><li>Studio</li><li>Automatizaciones</li><li>Capacitación</li></ul>
-              <a href="#contact">Digitalizar mi negocio <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="web.s5.title">Odoo & ERP</h3>
+              <p data-i18n="web.s5.desc">Digitalización de procesos comerciales y operativos con Odoo adaptado a cada empresa.</p>
+              <ul>
+                <li data-i18n="web.s5.f1">CRM y Ventas</li>
+                <li data-i18n="web.s5.f2">Studio</li>
+                <li data-i18n="web.s5.f3">Automatizaciones</li>
+                <li data-i18n="web.s5.f4">Capacitación</li>
+              </ul>
+              <a href="#contact"><span data-i18n="web.s5.cta">Digitalizar mi negocio</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
 
             <article class="service-card reveal">
               <div class="service-number">06</div>
               <div class="service-icon"><i class="fa-solid fa-server"></i></div>
-              <h3>Consultoría tecnológica</h3>
-              <p>Te ayudamos a elegir la mejor estrategia digital para tu negocio.</p>
-              <ul><li>Arquitectura</li><li>Transformación digital</li><li>Optimización</li><li>Acompañamiento</li></ul>
-              <a href="#contact">Asesorarme <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="web.s6.title">Consultoría tecnológica</h3>
+              <p data-i18n="web.s6.desc">Te ayudamos a elegir la mejor estrategia digital para tu negocio.</p>
+              <ul>
+                <li data-i18n="web.s6.f1">Arquitectura</li>
+                <li data-i18n="web.s6.f2">Transformación digital</li>
+                <li data-i18n="web.s6.f3">Optimización</li>
+                <li data-i18n="web.s6.f4">Acompañamiento</li>
+              </ul>
+              <a href="#contact"><span data-i18n="web.s6.cta">Asesorarme</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
           </div>
         </div>
 
-        <!-- PANEL: PC GAMER -->
+        <!-- PANEL HARDWARE -->
         <div class="service-panel" data-panel="hardware">
           <div class="service-grid">
             <article class="service-card featured reveal">
               <div class="service-number">01</div>
               <div class="service-icon"><i class="fa-solid fa-memory"></i></div>
-              <h3>Cambio de RAM</h3>
-              <p>Ampliamos o reemplazamos la memoria RAM de tu PC Gamer para mejorar el rendimiento.</p>
-              <ul><li>Diagnóstico de compatibilidad</li><li>Instalación profesional</li><li>Pruebas de rendimiento</li></ul>
-              <a href="#contact">Mejorar mi RAM <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="hw.s1.title">Cambio de RAM</h3>
+              <p data-i18n="hw.s1.desc">Ampliamos o reemplazamos la memoria RAM de tu PC Gamer para mejorar el rendimiento.</p>
+              <ul>
+                <li data-i18n="hw.s1.f1">Diagnóstico de compatibilidad</li>
+                <li data-i18n="hw.s1.f2">Instalación profesional</li>
+                <li data-i18n="hw.s1.f3">Pruebas de rendimiento</li>
+              </ul>
+              <a href="#contact"><span data-i18n="hw.s1.cta">Mejorar mi RAM</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
 
             <article class="service-card reveal">
               <div class="service-number">02</div>
               <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
-              <h3>Fuentes de poder</h3>
-              <p>Reemplazamos fuentes dañadas por modelos certificados que soporten tu configuración.</p>
-              <ul><li>Cálculo de wattage</li><li>Fuentes 80+ certificadas</li><li>Instalación y cableado</li></ul>
-              <a href="#contact">Cambiar fuente <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="hw.s2.title">Fuentes de poder</h3>
+              <p data-i18n="hw.s2.desc">Reemplazamos fuentes dañadas por modelos certificados que soporten tu configuración.</p>
+              <ul>
+                <li data-i18n="hw.s2.f1">Cálculo de wattage</li>
+                <li data-i18n="hw.s2.f2">Fuentes 80+ certificadas</li>
+                <li data-i18n="hw.s2.f3">Instalación y cableado</li>
+              </ul>
+              <a href="#contact"><span data-i18n="hw.s2.cta">Cambiar fuente</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
 
             <article class="service-card reveal">
               <div class="service-number">03</div>
               <div class="service-icon"><i class="fa-solid fa-microchip"></i></div>
-              <h3>Placas madre</h3>
-              <p>Sustituimos placas madre compatibles con tu procesador y RAM.</p>
-              <ul><li>Compatibilidad garantizada</li><li>Actualización de BIOS</li><li>Montaje completo</li></ul>
-              <a href="#contact">Cambiar placa <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="hw.s3.title">Placas madre</h3>
+              <p data-i18n="hw.s3.desc">Sustituimos placas madre compatibles con tu procesador y RAM.</p>
+              <ul>
+                <li data-i18n="hw.s3.f1">Compatibilidad garantizada</li>
+                <li data-i18n="hw.s3.f2">Actualización de BIOS</li>
+                <li data-i18n="hw.s3.f3">Montaje completo</li>
+              </ul>
+              <a href="#contact"><span data-i18n="hw.s3.cta">Cambiar placa</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
 
             <article class="service-card reveal">
               <div class="service-number">04</div>
               <div class="service-icon"><i class="fa-solid fa-hard-drive"></i></div>
-              <h3>SSD / NVMe</h3>
-              <p>Instalamos unidades SSD o NVMe para que tu sistema y juegos carguen en segundos.</p>
-              <ul><li>Migración de sistema</li><li>Optimización de arranque</li><li>Clonado de datos</li></ul>
-              <a href="#contact">Instalar SSD <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="hw.s4.title">SSD / NVMe</h3>
+              <p data-i18n="hw.s4.desc">Instalamos unidades SSD o NVMe para que tu sistema y juegos carguen en segundos.</p>
+              <ul>
+                <li data-i18n="hw.s4.f1">Migración de sistema</li>
+                <li data-i18n="hw.s4.f2">Optimización de arranque</li>
+                <li data-i18n="hw.s4.f3">Clonado de datos</li>
+              </ul>
+              <a href="#contact"><span data-i18n="hw.s4.cta">Instalar SSD</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
 
             <article class="service-card reveal">
               <div class="service-number">05</div>
               <div class="service-icon"><i class="fa-solid fa-fan"></i></div>
-              <h3>Limpieza y mantenimiento</h3>
-              <p>Limpieza profunda, cambio de pasta térmica y revisión de ventilación.</p>
-              <ul><li>Limpieza interna</li><li>Pasta térmica</li><li>Flujo de aire</li></ul>
-              <a href="#contact">Mantenimiento <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="hw.s5.title">Limpieza y mantenimiento</h3>
+              <p data-i18n="hw.s5.desc">Limpieza profunda, cambio de pasta térmica y revisión de ventilación.</p>
+              <ul>
+                <li data-i18n="hw.s5.f1">Limpieza interna</li>
+                <li data-i18n="hw.s5.f2">Pasta térmica</li>
+                <li data-i18n="hw.s5.f3">Flujo de aire</li>
+              </ul>
+              <a href="#contact"><span data-i18n="hw.s5.cta">Mantenimiento</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
 
             <article class="service-card reveal">
               <div class="service-number">06</div>
               <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-              <h3>Optimización general</h3>
-              <p>Ajustamos software, drivers y Windows para maximizar el rendimiento.</p>
-              <ul><li>Actualización de drivers</li><li>Optimización Windows</li><li>Configuración</li></ul>
-              <a href="#contact">Optimizar PC <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="hw.s6.title">Optimización general</h3>
+              <p data-i18n="hw.s6.desc">Ajustamos software, drivers y Windows para maximizar el rendimiento.</p>
+              <ul>
+                <li data-i18n="hw.s6.f1">Actualización de drivers</li>
+                <li data-i18n="hw.s6.f2">Optimización Windows</li>
+                <li data-i18n="hw.s6.f3">Configuración</li>
+              </ul>
+              <a href="#contact"><span data-i18n="hw.s6.cta">Optimizar PC</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
           </div>
         </div>
 
-        <!-- PANEL: INVITACIONES -->
+        <!-- PANEL INVITACIONES -->
         <div class="service-panel" data-panel="invitaciones">
           <div class="service-grid">
             <article class="service-card featured reveal">
               <div class="service-number">01</div>
               <div class="service-icon"><i class="fa-solid fa-heart"></i></div>
-              <h3>Invitaciones de Boda</h3>
-              <p>Invitaciones digitales elegantes con animaciones, música, galería y confirmación por WhatsApp.</p>
-              <ul><li>Diseño personalizado</li><li>Galería y música</li><li>RSVP WhatsApp</li></ul>
-              <a href="#contact">Mi boda <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="inv.s1.title">Invitaciones de Boda</h3>
+              <p data-i18n="inv.s1.desc">Invitaciones digitales elegantes con animaciones, música, galería y confirmación por WhatsApp.</p>
+              <ul>
+                <li data-i18n="inv.s1.f1">Diseño personalizado</li>
+                <li data-i18n="inv.s1.f2">Galería y música</li>
+                <li data-i18n="inv.s1.f3">RSVP WhatsApp</li>
+              </ul>
+              <a href="#contact"><span data-i18n="inv.s1.cta">Mi boda</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
 
             <article class="service-card reveal">
               <div class="service-number">02</div>
               <div class="service-icon"><i class="fa-solid fa-cake-candles"></i></div>
-              <h3>XV Años</h3>
-              <p>Diseños modernos y coloridos con cuenta regresiva, mapas y sección de regalos.</p>
-              <ul><li>Cuenta regresiva</li><li>Mapa interactivo</li><li>Sección de regalos</li></ul>
-              <a href="#contact">Mis XV <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="inv.s2.title">XV Años</h3>
+              <p data-i18n="inv.s2.desc">Diseños modernos y coloridos con cuenta regresiva, mapas y sección de regalos.</p>
+              <ul>
+                <li data-i18n="inv.s2.f1">Cuenta regresiva</li>
+                <li data-i18n="inv.s2.f2">Mapa interactivo</li>
+                <li data-i18n="inv.s2.f3">Sección de regalos</li>
+              </ul>
+              <a href="#contact"><span data-i18n="inv.s2.cta">Mis XV</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
 
             <article class="service-card reveal">
               <div class="service-number">03</div>
               <div class="service-icon"><i class="fa-solid fa-calendar-days"></i></div>
-              <h3>Cumpleaños y eventos</h3>
-              <p>Invitaciones para cumpleaños, baby showers y eventos especiales.</p>
-              <ul><li>Diseño temático</li><li>Formulario RSVP</li><li>Compartir por link</li></ul>
-              <a href="#contact">Mi evento <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="inv.s3.title">Cumpleaños y eventos</h3>
+              <p data-i18n="inv.s3.desc">Invitaciones para cumpleaños, baby showers y eventos especiales.</p>
+              <ul>
+                <li data-i18n="inv.s3.f1">Diseño temático</li>
+                <li data-i18n="inv.s3.f2">Formulario RSVP</li>
+                <li data-i18n="inv.s3.f3">Compartir por link</li>
+              </ul>
+              <a href="#contact"><span data-i18n="inv.s3.cta">Mi evento</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
 
             <article class="service-card reveal">
               <div class="service-number">04</div>
               <div class="service-icon"><i class="fa-solid fa-music"></i></div>
-              <h3>Música y animaciones</h3>
-              <p>Música de fondo, animaciones suaves y transiciones elegantes.</p>
-              <ul><li>Música personalizada</li><li>Animaciones</li><li>Efectos visuales</li></ul>
-              <a href="#contact">Personalizar <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="inv.s4.title">Música y animaciones</h3>
+              <p data-i18n="inv.s4.desc">Música de fondo, animaciones suaves y transiciones elegantes.</p>
+              <ul>
+                <li data-i18n="inv.s4.f1">Música personalizada</li>
+                <li data-i18n="inv.s4.f2">Animaciones</li>
+                <li data-i18n="inv.s4.f3">Efectos visuales</li>
+              </ul>
+              <a href="#contact"><span data-i18n="inv.s4.cta">Personalizar</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
 
             <article class="service-card reveal">
               <div class="service-number">05</div>
               <div class="service-icon"><i class="fa-solid fa-map-location-dot"></i></div>
-              <h3>Mapas interactivos</h3>
-              <p>Mapas con la ubicación exacta del evento y botones para Google Maps o Waze.</p>
-              <ul><li>Google Maps</li><li>Botón Waze</li><li>Indicaciones claras</li></ul>
-              <a href="#contact">Con mapa <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="inv.s5.title">Mapas interactivos</h3>
+              <p data-i18n="inv.s5.desc">Mapas con la ubicación exacta del evento y botones para Google Maps o Waze.</p>
+              <ul>
+                <li data-i18n="inv.s5.f1">Google Maps</li>
+                <li data-i18n="inv.s5.f2">Botón Waze</li>
+                <li data-i18n="inv.s5.f3">Indicaciones claras</li>
+              </ul>
+              <a href="#contact"><span data-i18n="inv.s5.cta">Con mapa</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
 
             <article class="service-card reveal">
               <div class="service-number">06</div>
               <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
-              <h3>Diseño 100% personalizado</h3>
-              <p>Cada invitación se diseña desde cero según los colores y estilo del evento.</p>
-              <ul><li>Colores a elección</li><li>Tipografías únicas</li><li>Ilustraciones</li></ul>
-              <a href="#contact">Diseñar <i class="fa-solid fa-arrow-right"></i></a>
+              <h3 data-i18n="inv.s6.title">Diseño 100% personalizado</h3>
+              <p data-i18n="inv.s6.desc">Cada invitación se diseña desde cero según los colores y estilo del evento.</p>
+              <ul>
+                <li data-i18n="inv.s6.f1">Colores a elección</li>
+                <li data-i18n="inv.s6.f2">Tipografías únicas</li>
+                <li data-i18n="inv.s6.f3">Ilustraciones</li>
+              </ul>
+              <a href="#contact"><span data-i18n="inv.s6.cta">Diseñar</span> <i class="fa-solid fa-arrow-right"></i></a>
             </article>
           </div>
         </div>
@@ -347,17 +450,17 @@
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <div class="section-label">03 / Nuestra forma de trabajar</div>
-            <h2>De una conversación<br><span>a algo real.</span></h2>
+            <div class="section-label" data-i18n="process.label">03 / Nuestra forma de trabajar</div>
+            <h2 data-i18n-html="process.title">De una conversación<br><span>a algo real.</span></h2>
           </div>
-          <p>No empezamos programando. Empezamos escuchando.</p>
+          <p data-i18n="process.sub">No empezamos programando. Empezamos escuchando.</p>
         </div>
 
         <div class="process-line">
-          <div class="process-step reveal"><span>01</span><i class="fa-solid fa-comments"></i><h3>Escuchamos</h3><p>Entendemos tu idea, problema y objetivo.</p></div>
-          <div class="process-step reveal"><span>02</span><i class="fa-solid fa-compass-drafting"></i><h3>Diseñamos</h3><p>Convertimos necesidades en una solución clara.</p></div>
-          <div class="process-step reveal"><span>03</span><i class="fa-solid fa-terminal"></i><h3>Construimos</h3><p>Desarrollamos, integramos y probamos.</p></div>
-          <div class="process-step reveal"><span>04</span><i class="fa-solid fa-rocket"></i><h3>Lanzamos</h3><p>Publicamos y acompañamos después de entregar.</p></div>
+          <div class="process-step reveal"><span>01</span><i class="fa-solid fa-comments"></i><h3 data-i18n="process.p1.title">Escuchamos</h3><p data-i18n="process.p1.desc">Entendemos tu idea, problema y objetivo.</p></div>
+          <div class="process-step reveal"><span>02</span><i class="fa-solid fa-compass-drafting"></i><h3 data-i18n="process.p2.title">Diseñamos</h3><p data-i18n="process.p2.desc">Convertimos necesidades en una solución clara.</p></div>
+          <div class="process-step reveal"><span>03</span><i class="fa-solid fa-terminal"></i><h3 data-i18n="process.p3.title">Construimos</h3><p data-i18n="process.p3.desc">Desarrollamos, integramos y probamos.</p></div>
+          <div class="process-step reveal"><span>04</span><i class="fa-solid fa-rocket"></i><h3 data-i18n="process.p4.title">Lanzamos</h3><p data-i18n="process.p4.desc">Publicamos y acompañamos después de entregar.</p></div>
         </div>
       </div>
     </section>
@@ -367,19 +470,23 @@
       <div class="container">
         <div class="values-top reveal">
           <div>
-            <div class="section-label light">04 / Nuestros valores</div>
-            <h2>Lo que hacemos importa.<br><span>Cómo lo hacemos, también.</span></h2>
+            <div class="section-label light" data-i18n="values.label">04 / Nuestros valores</div>
+            <h2 data-i18n-html="values.title">Lo que hacemos importa.<br><span>Cómo lo hacemos, también.</span></h2>
           </div>
-          <p>Nuestros valores están presentes en cada línea de código, cada diseño y cada conversación.</p>
+          <p data-i18n="values.sub">Nuestros valores están presentes en cada línea de código, cada diseño y cada conversación.</p>
         </div>
 
         <div class="values-grid">
-          <div class="value reveal"><span>01</span><i class="fa-solid fa-lightbulb"></i><h3>Innovación constante</h3><p>Buscamos nuevas formas de resolver problemas y crear experiencias mejores.</p></div>
-          <div class="value reveal"><span>02</span><i class="fa-solid fa-handshake"></i><h3>Compromiso</h3><p>Nos involucramos de verdad en cada proyecto y en cada resultado.</p></div>
-          <div class="value reveal"><span>03</span><i class="fa-solid fa-bullseye"></i><h3>Calidad con propósito</h3><p>No buscamos hacer más. Buscamos hacer algo que realmente sirva.</p></div>
-          <div class="value reveal"><span>04</span><i class="fa-solid fa-people-arrows"></i><h3>Empatía & cercanía</h3><p>La tecnología funciona mejor cuando primero entendemos a las personas.</p></div>
-          <div class="value reveal"><span>05</span><i class="fa-solid fa-seedling"></i><h3>Responsabilidad</h3><p>Construimos pensando en el impacto que nuestras decisiones generan.</p></div>
-          <div class="value quote reveal"><div class="quote-mark">"</div><p>La tecnología debe adaptarse a las personas, no las personas a la tecnología.</p><small>— Filosofía LIMELAB</small></div>
+          <div class="value reveal"><span>01</span><i class="fa-solid fa-lightbulb"></i><h3 data-i18n="values.v1.title">Innovación constante</h3><p data-i18n="values.v1.desc">Buscamos nuevas formas de resolver problemas y crear experiencias mejores.</p></div>
+          <div class="value reveal"><span>02</span><i class="fa-solid fa-handshake"></i><h3 data-i18n="values.v2.title">Compromiso</h3><p data-i18n="values.v2.desc">Nos involucramos de verdad en cada proyecto y en cada resultado.</p></div>
+          <div class="value reveal"><span>03</span><i class="fa-solid fa-bullseye"></i><h3 data-i18n="values.v3.title">Calidad con propósito</h3><p data-i18n="values.v3.desc">No buscamos hacer más. Buscamos hacer algo que realmente sirva.</p></div>
+          <div class="value reveal"><span>04</span><i class="fa-solid fa-people-arrows"></i><h3 data-i18n="values.v4.title">Empatía & cercanía</h3><p data-i18n="values.v4.desc">La tecnología funciona mejor cuando primero entendemos a las personas.</p></div>
+          <div class="value reveal"><span>05</span><i class="fa-solid fa-seedling"></i><h3 data-i18n="values.v5.title">Responsabilidad</h3><p data-i18n="values.v5.desc">Construimos pensando en el impacto que nuestras decisiones generan.</p></div>
+          <div class="value quote reveal">
+            <div class="quote-mark">"</div>
+            <p data-i18n="values.quote">La tecnología debe adaptarse a las personas, no las personas a la tecnología.</p>
+            <small data-i18n="values.quote.author">— Filosofía LIMELAB</small>
+          </div>
         </div>
       </div>
     </section>
@@ -389,24 +496,24 @@
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <div class="section-label">05 / Nuestra historia</div>
-            <h2>Una idea que comenzó<br><span>con ganas de crear.</span></h2>
+            <div class="section-label" data-i18n="about.label">05 / Nuestra historia</div>
+            <h2 data-i18n-html="about.title">Una idea que comenzó<br><span>con ganas de crear.</span></h2>
           </div>
         </div>
 
         <div class="about-grid">
           <div class="about-story reveal">
-            <p class="lead">
+            <p class="lead" data-i18n="about.lead">
               LIMELAB representa la idea de construir tecnología con una perspectiva
               cercana, creativa y humana.
             </p>
-            <p>
+            <p data-i18n="about.p1">
               Comenzamos creando proyectos digitales para convertir necesidades concretas
               en herramientas funcionales. Con cada proyecto aprendimos algo nuevo:
               escuchar mejor, diseñar mejor y construir soluciones que realmente puedan
               utilizarse en el mundo real.
             </p>
-            <p>
+            <p data-i18n="about.p2">
               Hoy LIMELAB reúne desarrollo de software, web, aplicaciones, mantenimiento
               de PCs Gamer, automatización, IA, Odoo e incluso experiencias digitales
               para momentos especiales como bodas y celebraciones.
@@ -414,17 +521,21 @@
           </div>
 
           <div class="timeline reveal">
-            <div class="timeline-item"><span>2023</span><div><h3>El comienzo</h3><p>Primeros proyectos y primeras ideas que dieron forma a LIMELAB.</p></div></div>
-            <div class="timeline-item"><span>2024</span><div><h3>Primeros clientes</h3><p>Proyectos vendidos y experiencias que ayudaron a definir nuestro camino.</p></div></div>
-            <div class="timeline-item"><span>2025</span><div><h3>Consolidación</h3><p>Ampliamos nuestra visión hacia software, web y soluciones digitales.</p></div></div>
-            <div class="timeline-item active"><span>2026</span><div><h3>Nueva etapa</h3><p>Hardware, PC Gamer, invitaciones digitales y experiencias web.</p></div></div>
+            <div class="timeline-item"><span>2023</span><div><h3 data-i18n="about.t1.title">El comienzo</h3><p data-i18n="about.t1.desc">Primeros proyectos y primeras ideas que dieron forma a LIMELAB.</p></div></div>
+            <div class="timeline-item"><span>2024</span><div><h3 data-i18n="about.t2.title">Primeros clientes</h3><p data-i18n="about.t2.desc">Proyectos vendidos y experiencias que ayudaron a definir nuestro camino.</p></div></div>
+            <div class="timeline-item"><span>2025</span><div><h3 data-i18n="about.t3.title">Consolidación</h3><p data-i18n="about.t3.desc">Ampliamos nuestra visión hacia software, web y soluciones digitales.</p></div></div>
+            <div class="timeline-item active"><span>2026</span><div><h3 data-i18n="about.t4.title">Nueva etapa</h3><p data-i18n="about.t4.desc">Hardware, PC Gamer, invitaciones digitales y experiencias web.</p></div></div>
           </div>
         </div>
 
         <div class="founder reveal">
           <div class="founder-avatar">A</div>
-          <div><span>Fundador</span><h3>Alberto Méndez</h3><p>Desarrollador & arquitecto de soluciones digitales</p></div>
-          <div class="founder-note">"Convertir una idea en algo que funciona es solo el comienzo."</div>
+          <div>
+            <span data-i18n="about.founder.label">Fundador</span>
+            <h3>Alberto Méndez</h3>
+            <p data-i18n="about.founder.role">Desarrollador & arquitecto de soluciones digitales</p>
+          </div>
+          <div class="founder-note" data-i18n="about.founder.quote">"Convertir una idea en algo que funciona es solo el comienzo."</div>
         </div>
       </div>
     </section>
@@ -433,37 +544,37 @@
     <section class="mission section section-grid">
       <div class="container mission-grid">
         <div class="mission-card reveal">
-          <span>06 / Nuestra misión</span>
+          <span data-i18n="mission.label">06 / Nuestra misión</span>
           <i class="fa-solid fa-compass"></i>
-          <h2>Crear tecnología que tenga un <em>impacto real.</em></h2>
-          <p>Desarrollar soluciones digitales útiles, accesibles y significativas que ayuden a personas y empresas a transformar sus ideas, procesos y oportunidades.</p>
+          <h2 data-i18n-html="mission.title">Crear tecnología que tenga un <em>impacto real.</em></h2>
+          <p data-i18n="mission.desc">Desarrollar soluciones digitales útiles, accesibles y significativas que ayuden a personas y empresas a transformar sus ideas, procesos y oportunidades.</p>
         </div>
         <div class="mission-card vision-card reveal">
-          <span>Nuestra visión</span>
+          <span data-i18n="vision.label">Nuestra visión</span>
           <i class="fa-solid fa-eye"></i>
-          <h2>Ser un referente de tecnología <em>cercana e innovadora.</em></h2>
-          <p>Construir una empresa tecnológica reconocida por la calidad de sus soluciones, la confianza con sus clientes y su capacidad de convertir problemas complejos en experiencias simples.</p>
+          <h2 data-i18n-html="vision.title">Ser un referente de tecnología <em>cercana e innovadora.</em></h2>
+          <p data-i18n="vision.desc">Construir una empresa tecnológica reconocida por la calidad de sus soluciones, la confianza con sus clientes y su capacidad de convertir problemas complejos en experiencias simples.</p>
         </div>
       </div>
     </section>
 
-    <!-- ==================== PORTFOLIO / GALLERY ==================== -->
+    <!-- ==================== PORTFOLIO ==================== -->
     <section class="portfolio section" id="portfolio">
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <div class="section-label">07 / Portafolio</div>
-            <h2>Ideas que ya<br><span>se hicieron realidad.</span></h2>
+            <div class="section-label" data-i18n="portfolio.label">07 / Portafolio</div>
+            <h2 data-i18n-html="portfolio.title">Ideas que ya<br><span>se hicieron realidad.</span></h2>
           </div>
-          <p>Una selección de proyectos, mantenimientos e invitaciones digitales.</p>
+          <p data-i18n="portfolio.sub">Una selección de proyectos, mantenimientos e invitaciones digitales.</p>
         </div>
 
         <!-- FILTERS -->
         <div class="portfolio-filters reveal" id="portfolioFilters">
-          <button class="filter active" data-filter="all">Todo</button>
-          <button class="filter" data-filter="web">Web & Software</button>
-          <button class="filter" data-filter="invitaciones">Invitaciones</button>
-          <button class="filter" data-filter="hardware">PC Gamer</button>
+          <button class="filter active" data-filter="all" data-i18n="portfolio.filter.all">Todo</button>
+          <button class="filter" data-filter="web" data-i18n="portfolio.filter.web">Web & Software</button>
+          <button class="filter" data-filter="invitaciones" data-i18n="portfolio.filter.inv">Invitaciones</button>
+          <button class="filter" data-filter="hardware" data-i18n="portfolio.filter.hw">PC Gamer</button>
         </div>
 
         <!-- GRID -->
@@ -473,12 +584,12 @@
           <article class="project reveal" data-category="web" data-type="image" data-src="https://limelab30.vercel.app/img/farmacia-drbee.png">
             <div class="project-image">
               <img src="https://limelab30.vercel.app/img/farmacia-drbee.png" alt="Farmacia Dr. Bee">
-              <div class="project-overlay"><span>Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
             </div>
             <div class="project-info">
-              <span>Sistema web</span>
+              <span data-i18n="portfolio.p1.tag">Sistema web</span>
               <h3>Farmacia Dr. Bee</h3>
-              <p>Gestión de productos, usuarios e inventario.</p>
+              <p data-i18n="portfolio.p1.desc">Gestión de productos, usuarios e inventario.</p>
               <div class="tags"><b>Laravel</b><b>MySQL</b><b>Bootstrap</b></div>
             </div>
           </article>
@@ -487,75 +598,75 @@
           <article class="project reveal" data-category="web" data-type="image" data-src="https://limelab30.vercel.app/img/yomonalex.png">
             <div class="project-image">
               <img src="https://limelab30.vercel.app/img/yomonalex.png" alt="Yomonalex">
-              <div class="project-overlay"><span>Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
             </div>
             <div class="project-info">
-              <span>E-commerce</span>
+              <span data-i18n="portfolio.p2.tag">E-commerce</span>
               <h3>Yomonalex</h3>
-              <p>Tienda online para productos de acero inoxidable.</p>
+              <p data-i18n="portfolio.p2.desc">Tienda online para productos de acero inoxidable.</p>
               <div class="tags"><b>Laravel</b><b>MySQL</b><b>Tailwind</b></div>
             </div>
           </article>
 
-          <!-- 3 - Invitación (VIDEO) -->
+          <!-- 3 - Invitación VIDEO -->
           <article class="project reveal" data-category="invitaciones" data-type="video" data-src="videos/invitacion-boda.mp4" data-poster="img/invitacion-boda-poster.jpg">
             <div class="project-image">
               <img src="img/invitacion-boda-poster.jpg" alt="Invitación de Boda">
               <div class="project-overlay video-overlay">
                 <div class="play-btn"><i class="fa-solid fa-play"></i></div>
               </div>
-              <div class="video-badge"><i class="fa-solid fa-video"></i> Video</div>
+              <div class="video-badge"><i class="fa-solid fa-video"></i> <span data-i18n="portfolio.video">Video</span></div>
             </div>
             <div class="project-info">
-              <span>Invitación digital</span>
-              <h3>Boda — Ana & Luis</h3>
-              <p>Invitación animada con música, galería y RSVP por WhatsApp.</p>
+              <span data-i18n="portfolio.p3.tag">Invitación digital</span>
+              <h3 data-i18n="portfolio.p3.title">Boda — Ana & Luis</h3>
+              <p data-i18n="portfolio.p3.desc">Invitación animada con música, galería y RSVP por WhatsApp.</p>
               <div class="tags"><b>HTML</b><b>CSS</b><b>JavaScript</b></div>
             </div>
           </article>
 
-          <!-- 4 - Invitación (IMAGEN) -->
+          <!-- 4 - Invitación IMAGEN -->
           <article class="project reveal" data-category="invitaciones" data-type="image" data-src="img/invitacion-xv.jpg">
             <div class="project-image">
               <img src="img/invitacion-xv.jpg" alt="Invitación XV Años">
-              <div class="project-overlay"><span>Ver invitación</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
             </div>
             <div class="project-info">
-              <span>Invitación digital</span>
-              <h3>XV Años — Sofía</h3>
-              <p>Diseño moderno con cuenta regresiva y mapa interactivo.</p>
-              <div class="tags"><b>XV Años</b><b>Animaciones</b><b>Mapa</b></div>
+              <span data-i18n="portfolio.p3.tag">Invitación digital</span>
+              <h3 data-i18n="portfolio.p4.title">XV Años — Sofía</h3>
+              <p data-i18n="portfolio.p4.desc">Diseño moderno con cuenta regresiva y mapa interactivo.</p>
+              <div class="tags"><b data-i18n="portfolio.p4.t1">XV Años</b><b data-i18n="portfolio.p4.t2">Animaciones</b><b data-i18n="portfolio.p4.t3">Mapa</b></div>
             </div>
           </article>
 
-          <!-- 5 - Hardware (IMAGEN) -->
+          <!-- 5 - Hardware IMAGEN -->
           <article class="project reveal" data-category="hardware" data-type="image" data-src="img/pc-gamer-1.jpg">
             <div class="project-image">
               <img src="img/pc-gamer-1.jpg" alt="PC Gamer RAM">
-              <div class="project-overlay"><span>Ver trabajo</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
             </div>
             <div class="project-info">
-              <span>PC Gamer</span>
-              <h3>Cambio de RAM y SSD</h3>
-              <p>Actualización completa con 32GB RAM y SSD NVMe 1TB.</p>
-              <div class="tags"><b>RAM</b><b>SSD NVMe</b><b>Optimización</b></div>
+              <span data-i18n="portfolio.p5.tag">PC Gamer</span>
+              <h3 data-i18n="portfolio.p5.title">Cambio de RAM y SSD</h3>
+              <p data-i18n="portfolio.p5.desc">Actualización completa con 32GB RAM y SSD NVMe 1TB.</p>
+              <div class="tags"><b>RAM</b><b>SSD NVMe</b><b data-i18n="portfolio.p5.t3">Optimización</b></div>
             </div>
           </article>
 
-          <!-- 6 - Hardware (VIDEO) -->
+          <!-- 6 - Hardware VIDEO -->
           <article class="project reveal" data-category="hardware" data-type="video" data-src="videos/mantenimiento-pc.mp4" data-poster="img/mantenimiento-pc-poster.jpg">
             <div class="project-image">
               <img src="img/mantenimiento-pc-poster.jpg" alt="Mantenimiento PC Gamer">
               <div class="project-overlay video-overlay">
                 <div class="play-btn"><i class="fa-solid fa-play"></i></div>
               </div>
-              <div class="video-badge"><i class="fa-solid fa-video"></i> Video</div>
+              <div class="video-badge"><i class="fa-solid fa-video"></i> <span data-i18n="portfolio.video">Video</span></div>
             </div>
             <div class="project-info">
-              <span>PC Gamer</span>
-              <h3>Mantenimiento Completo</h3>
-              <p>Limpieza profunda, cambio de pasta térmica y optimización.</p>
-              <div class="tags"><b>Limpieza</b><b>Pasta térmica</b><b>Temperaturas</b></div>
+              <span data-i18n="portfolio.p5.tag">PC Gamer</span>
+              <h3 data-i18n="portfolio.p6.title">Mantenimiento Completo</h3>
+              <p data-i18n="portfolio.p6.desc">Limpieza profunda, cambio de pasta térmica y optimización.</p>
+              <div class="tags"><b data-i18n="portfolio.p6.t1">Limpieza</b><b data-i18n="portfolio.p6.t2">Pasta térmica</b><b data-i18n="portfolio.p6.t3">Temperaturas</b></div>
             </div>
           </article>
 
@@ -563,12 +674,12 @@
           <article class="project reveal" data-category="web" data-type="image" data-src="img/landing-startup.jpg">
             <div class="project-image">
               <img src="img/landing-startup.jpg" alt="Landing Page">
-              <div class="project-overlay"><span>Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
             </div>
             <div class="project-info">
-              <span>Landing page</span>
-              <h3>Startup Tecnológica</h3>
-              <p>Landing moderna con animaciones y formulario de contacto.</p>
+              <span data-i18n="portfolio.p7.tag">Landing page</span>
+              <h3 data-i18n="portfolio.p7.title">Startup Tecnológica</h3>
+              <p data-i18n="portfolio.p7.desc">Landing moderna con animaciones y formulario de contacto.</p>
               <div class="tags"><b>React</b><b>Tailwind</b><b>Motion</b></div>
             </div>
           </article>
@@ -577,13 +688,13 @@
           <article class="project reveal" data-category="hardware" data-type="image" data-src="img/fuente-poder.jpg">
             <div class="project-image">
               <img src="img/fuente-poder.jpg" alt="Fuente de poder">
-              <div class="project-overlay"><span>Ver trabajo</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
             </div>
             <div class="project-info">
-              <span>PC Gamer</span>
-              <h3>Cambio de Fuente de Poder</h3>
-              <p>Instalación de fuente certificada 80+ Gold de 750W.</p>
-              <div class="tags"><b>Fuente 80+</b><b>Cableado</b><b>Wattage</b></div>
+              <span data-i18n="portfolio.p5.tag">PC Gamer</span>
+              <h3 data-i18n="portfolio.p8.title">Cambio de Fuente de Poder</h3>
+              <p data-i18n="portfolio.p8.desc">Instalación de fuente certificada 80+ Gold de 750W.</p>
+              <div class="tags"><b>80+ Gold</b><b data-i18n="portfolio.p8.t2">Cableado</b><b>Wattage</b></div>
             </div>
           </article>
 
@@ -594,14 +705,14 @@
     <!-- ==================== PROMISE ==================== -->
     <section class="promise section dark-section">
       <div class="container promise-inner reveal">
-        <div class="section-label light">08 / Nuestra promesa</div>
-        <h2>Tu proyecto no es<br><span>"uno más".</span></h2>
-        <p>
+        <div class="section-label light" data-i18n="promise.label">08 / Nuestra promesa</div>
+        <h2 data-i18n-html="promise.title">Tu proyecto no es<br><span>"uno más".</span></h2>
+        <p data-i18n="promise.desc">
           Cada proyecto representa una oportunidad de crear algo extraordinario.
           Combinamos criterio técnico, creatividad y atención personal para que
           la solución no solo se vea bien, sino que funcione y tenga sentido.
         </p>
-        <a href="#contact" class="btn btn-white">Cuéntame tu idea <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-white"><span data-i18n="promise.cta">Cuéntame tu idea</span> <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </section>
 
@@ -610,55 +721,73 @@
       <div class="container">
         <div class="contact-header reveal">
           <div>
-            <div class="section-label">09 / Hablemos</div>
-            <h2>¿Qué vamos<br><span>a crear?</span></h2>
+            <div class="section-label" data-i18n="contact.label">09 / Hablemos</div>
+            <h2 data-i18n-html="contact.title">¿Qué vamos<br><span>a crear?</span></h2>
           </div>
-          <p>Cuéntame qué tienes en mente. Una idea, un problema, un proyecto o simplemente una pregunta.</p>
+          <p data-i18n="contact.sub">Cuéntame qué tienes en mente. Una idea, un problema, un proyecto o simplemente una pregunta.</p>
         </div>
 
         <div class="contact-grid">
           <div class="contact-info reveal">
-            <a href="https://wa.me/523324464894?text=Hola%20LIMELAB,%20quiero%20hablar%20sobre%20un%20proyecto." target="_blank" rel="noopener" class="contact-item whatsapp-item">
+            <a href="https://wa.me/523332250942?text=Hola%20LIMELAB,%20quiero%20hablar%20sobre%20un%20proyecto." target="_blank" rel="noopener" class="contact-item whatsapp-item">
               <i class="fa-brands fa-whatsapp"></i>
-              <div><small>WhatsApp</small><strong>+52 33 2446 4894</strong><span>Escríbeme directamente →</span></div>
+              <div>
+                <small>WhatsApp</small>
+                <strong>+52 33 3225 0942</strong>
+                <span data-i18n="contact.whatsapp.cta">Escríbeme directamente →</span>
+              </div>
             </a>
             <a href="mailto:mendezalberto295@gmail.com" class="contact-item">
               <i class="fa-regular fa-envelope"></i>
-              <div><small>Email</small><strong>mendezalberto295@gmail.com</strong><span>Respuesta en 24 horas</span></div>
+              <div>
+                <small>Email</small>
+                <strong>mendezalberto295@gmail.com</strong>
+                <span data-i18n="contact.email.cta">Respuesta en 24 horas</span>
+              </div>
             </a>
             <div class="contact-item">
               <i class="fa-solid fa-location-dot"></i>
-              <div><small>Ubicación</small><strong>Guadalajara, Jalisco</strong><span>También trabajamos remotamente</span></div>
+              <div>
+                <small data-i18n="contact.location.label">Ubicación</small>
+                <strong>Guadalajara, Jalisco</strong>
+                <span data-i18n="contact.location.cta">También trabajamos remotamente</span>
+              </div>
             </div>
           </div>
 
           <form class="contact-form reveal" id="contactForm">
             <div class="form-row">
-              <label>Nombre completo *
-                <input type="text" id="name" placeholder="¿Cómo te llamas?" required>
+              <label>
+                <span data-i18n="contact.form.name">Nombre completo *</span>
+                <input type="text" id="name" placeholder="¿Cómo te llamas?" data-i18n-placeholder="contact.form.name.ph" required>
               </label>
-              <label>Email *
-                <input type="email" id="email" placeholder="tu@email.com" required>
+              <label>
+                <span data-i18n="contact.form.email">Email *</span>
+                <input type="email" id="email" placeholder="tu@email.com" data-i18n-placeholder="contact.form.email.ph" required>
               </label>
             </div>
-            <label>¿Qué necesitas?
+            <label>
+              <span data-i18n="contact.form.service">¿Qué necesitas?</span>
               <select id="service">
-                <option value="No estoy seguro">No estoy seguro</option>
-                <option value="Sitio web / Software">Sitio web / Software</option>
-                <option value="Aplicación móvil">Aplicación móvil</option>
-                <option value="Mantenimiento PC Gamer">Mantenimiento PC Gamer</option>
-                <option value="Cambio de hardware (RAM, fuente, etc.)">Cambio de hardware (RAM, fuente, etc.)</option>
-                <option value="Invitación digital">Invitación digital</option>
-                <option value="IA y automatización">IA y automatización</option>
-                <option value="Odoo / ERP">Odoo / ERP</option>
-                <option value="Otro">Otro</option>
+                <option value="No estoy seguro" data-i18n="contact.form.s0">No estoy seguro</option>
+                <option value="Sitio web / Software" data-i18n="contact.form.s1">Sitio web / Software</option>
+                <option value="Aplicación móvil" data-i18n="contact.form.s2">Aplicación móvil</option>
+                <option value="Mantenimiento PC Gamer" data-i18n="contact.form.s3">Mantenimiento PC Gamer</option>
+                <option value="Cambio de hardware" data-i18n="contact.form.s4">Cambio de hardware (RAM, fuente, etc.)</option>
+                <option value="Invitación digital" data-i18n="contact.form.s5">Invitación digital</option>
+                <option value="IA y automatización" data-i18n="contact.form.s6">IA y automatización</option>
+                <option value="Odoo / ERP" data-i18n="contact.form.s7">Odoo / ERP</option>
+                <option value="Otro" data-i18n="contact.form.s8">Otro</option>
               </select>
             </label>
-            <label>Cuéntame sobre tu proyecto *
-              <textarea id="message" rows="5" placeholder="Cuéntame brevemente qué quieres crear..." required></textarea>
+            <label>
+              <span data-i18n="contact.form.message">Cuéntame sobre tu proyecto *</span>
+              <textarea id="message" rows="5" placeholder="Cuéntame brevemente qué quieres crear..." data-i18n-placeholder="contact.form.message.ph" required></textarea>
             </label>
-            <button class="btn btn-primary form-submit" type="submit">Enviar por WhatsApp <i class="fa-brands fa-whatsapp"></i></button>
-            <small class="form-note">Al enviar, se abrirá WhatsApp con tu mensaje listo para enviarlo.</small>
+            <button class="btn btn-primary form-submit" type="submit">
+              <span data-i18n="contact.form.submit">Enviar por WhatsApp</span> <i class="fa-brands fa-whatsapp"></i>
+            </button>
+            <small class="form-note" data-i18n="contact.form.note">Al enviar, se abrirá WhatsApp con tu mensaje listo para enviarlo.</small>
           </form>
         </div>
       </div>
@@ -673,7 +802,7 @@
           <img src="https://limelab30.vercel.app/img/logo_lime.png" alt="LIMELAB">
           <span>LIMELAB<small>TECHNOLOGIES</small></span>
         </a>
-        <p>Innovamos con propósito, creando soluciones digitales que convierten ideas en realidades.</p>
+        <p data-i18n="footer.tagline">Innovamos con propósito, creando soluciones digitales que convierten ideas en realidades.</p>
         <div class="socials">
           <a href="https://www.instagram.com/limelab30" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="https://www.facebook.com/profile.php?id=61579192204687" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -681,32 +810,54 @@
         </div>
       </div>
 
-      <div class="footer-col"><h4>Explora</h4><a href="#home">Inicio</a><a href="#services">Servicios</a><a href="#portfolio">Portafolio</a><a href="#values">Valores</a><a href="#about">Nosotros</a></div>
-      <div class="footer-col"><h4>Servicios</h4><a href="#services">Web & Software</a><a href="#services">PC Gamer</a><a href="#services">Invitaciones</a><a href="#services">IA & Automatización</a><a href="#services">Odoo</a></div>
-      <div class="footer-col"><h4>Contacto</h4><a href="mailto:mendezalberto295@gmail.com">Email</a><a href="https://wa.me/523332250942" target="_blank" rel="noopener">WhatsApp</a><span>Guadalajara, Jalisco</span></div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.explore">Explora</h4>
+        <a href="#home" data-i18n="nav.home">Inicio</a>
+        <a href="#services" data-i18n="nav.services">Servicios</a>
+        <a href="#portfolio" data-i18n="nav.portfolio">Portafolio</a>
+        <a href="#values" data-i18n="nav.values">Valores</a>
+        <a href="#about" data-i18n="nav.about">Nosotros</a>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.services">Servicios</h4>
+        <a href="#services" data-i18n="footer.s1">Web & Software</a>
+        <a href="#services" data-i18n="footer.s2">PC Gamer</a>
+        <a href="#services" data-i18n="footer.s3">Invitaciones</a>
+        <a href="#services" data-i18n="footer.s4">IA & Automatización</a>
+        <a href="#services" data-i18n="footer.s5">Odoo</a>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact">Contacto</h4>
+        <a href="mailto:mendezalberto295@gmail.com">Email</a>
+        <a href="https://wa.me/523332250942" target="_blank" rel="noopener">WhatsApp</a>
+        <span>Guadalajara, Jalisco</span>
+      </div>
     </div>
 
     <div class="container footer-bottom">
-      <span>© 2026 LIMELAB Technologies. Hecho con <i class="fa-solid fa-heart"></i> en México.</span>
-      <span>Innovación hecha con propósito.</span>
+      <span data-i18n="footer.copy">© 2026 LIMELAB Technologies. Hecho con ❤ en México.</span>
+      <span data-i18n="footer.tag">Innovación hecha con propósito.</span>
     </div>
   </footer>
 
   <!-- ==================== MODAL GALERÍA ==================== -->
   <div class="gallery-modal" id="galleryModal">
     <div class="gallery-modal-content">
-      <button class="gallery-close" id="galleryClose" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+      <button class="gallery-close" id="galleryClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
       <div class="gallery-modal-media" id="galleryMedia"></div>
       <div class="gallery-modal-caption" id="galleryCaption"></div>
     </div>
   </div>
 
-  <a href="https://wa.me/523324464894?text=Hola%20LIMELAB,%20quiero%20cotizar%20un%20proyecto." class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i><span>Hablemos</span>
+  <a href="https://wa.me/523332250942?text=Hola%20LIMELAB,%20quiero%20cotizar%20un%20proyecto." class="floating-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i><span data-i18n="float.cta">Hablemos</span>
   </a>
 
-  <button class="back-top" id="backTop" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></button>
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
