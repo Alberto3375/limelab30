@@ -93,22 +93,19 @@ tabs.forEach((tab) => {
       panel.classList.toggle("active", panel.dataset.panel === target);
     });
 
-    /* Re-animar las tarjetas del panel activo */
     const activePanel = document.querySelector(
       `.service-panel[data-panel="${target}"]`
     );
     if (activePanel) {
-      activePanel
-        .querySelectorAll(".service-card")
-        .forEach((card, i) => {
-          card.style.opacity = "0";
-          card.style.transform = "translateY(15px)";
-          setTimeout(() => {
-            card.style.transition = ".45s ease";
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
-          }, 60 * i);
-        });
+      activePanel.querySelectorAll(".service-card").forEach((card, i) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(15px)";
+        setTimeout(() => {
+          card.style.transition = ".45s ease";
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0)";
+        }, 60 * i);
+      });
     }
   });
 });
@@ -127,7 +124,6 @@ filters.forEach((filter) => {
     filters.forEach((f) => f.classList.remove("active"));
     filter.classList.add("active");
 
-    /* Eliminar empty state previo */
     const oldEmpty = portfolioGrid.querySelector(".portfolio-empty");
     if (oldEmpty) oldEmpty.remove();
 
@@ -140,7 +136,6 @@ filters.forEach((filter) => {
         visibleCount++;
         project.classList.remove("hidden");
         project.style.display = "";
-        /* animación de entrada */
         project.style.opacity = "0";
         project.style.transform = "translateY(15px) scale(.98)";
         setTimeout(() => {
@@ -153,12 +148,13 @@ filters.forEach((filter) => {
       }
     });
 
-    /* Empty state */
     if (visibleCount === 0) {
       const empty = document.createElement("div");
       empty.className = "portfolio-empty";
       empty.textContent =
-        "Aún no hay proyectos en esta categoría. ¡Pronto subiremos más!";
+        document.documentElement.lang === "en"
+          ? "No projects in this category yet. Coming soon!"
+          : "Aún no hay proyectos en esta categoría. ¡Pronto subiremos más!";
       portfolioGrid.appendChild(empty);
     }
   });
@@ -230,12 +226,14 @@ const contactForm = document.getElementById("contactForm");
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  const lang = document.documentElement.lang || "es";
+
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const service = document.getElementById("service").value;
   const message = document.getElementById("message").value.trim();
 
-  const text = `Hola LIMELAB 👋
+  const textES = `Hola LIMELAB 👋
 
 Mi nombre es: ${name}
 Mi correo: ${email}
@@ -246,14 +244,27 @@ ${message}
 
 Me gustaría conocer más información y una cotización.`;
 
+  const textEN = `Hi LIMELAB 👋
+
+My name is: ${name}
+My email: ${email}
+I'm interested in: ${service}
+
+My project:
+${message}
+
+I'd like more information and a quote.`;
+
+  const text = lang === "en" ? textEN : textES;
+
   window.open(
-    `https://wa.me/523332250942?text=${encodeURIComponent(text)}`,
+    `https://wa.me/523324464894?text=${encodeURIComponent(text)}`,
     "_blank"
   );
 });
 
 /* ============================================================
-   SMOOTH SCROLL PARA ENLACES ANCLAS
+   SMOOTH SCROLL PARA ANCLAS
 ============================================================ */
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
