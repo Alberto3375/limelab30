@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servicios de LIMELAB Technologies: Web & Software, PC Gamer & Hardware, Invitaciones Digitales.">
+  <title>Servicios | LIMELAB Technologies</title>
+  <link rel="icon" type="image/png" href="https://limelab30.vercel.app/img/logo_lime.png">
+  <meta name="theme-color" content="#b8ff3d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="servicios">
+
+  <div class="cursor-glow"></div>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="brand">
+        <img src="https://limelab30.vercel.app/img/logo_lime.png" alt="LIMELAB">
+        <span>LIMELAB<small>TECHNOLOGIES</small></span>
+      </a>
+      <div class="nav-right">
+        <div class="lang-switch" id="langSwitch">
+          <button class="lang-btn active" data-lang="es">🇲🇽 ES</button>
+          <button class="lang-btn" data-lang="en">🇺🇸 EN</button>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menú" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" data-i18n="nav.home">Inicio</a>
+          <a href="servicios.html" class="active" data-i18n="nav.services">Servicios</a>
+          <a href="portafolio.html" data-i18n="nav.portfolio">Portafolio</a>
+          <a href="nosotros.html" data-i18n="nav.about">Nosotros</a>
+          <a href="contacto.html" class="nav-cta" data-i18n="nav.cta">Hablemos <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-label reveal" data-i18n="sp.label">Servicios</div>
+        <h1 class="reveal" data-i18n-html="sp.title">Todo lo digital,<br><span>en un solo lugar.</span></h1>
+        <p class="reveal" data-i18n="sp.sub">Tres grandes áreas para resolver cualquier necesidad tecnológica.</p>
+      </div>
+    </section>
+
+    <!-- TABS -->
+    <section class="section">
+      <div class="container">
+        <div class="service-tabs reveal" id="serviceTabs">
+          <button class="tab active" data-tab="web"><i class="fa-solid fa-code"></i> <span data-i18n="services.tab1">Web & Software</span></button>
+          <button class="tab" data-tab="hardware"><i class="fa-solid fa-microchip"></i> <span data-i18n="services.tab2">PC Gamer & Hardware</span></button>
+          <button class="tab" data-tab="invitaciones"><i class="fa-solid fa-heart"></i> <span data-i18n="services.tab3">Invitaciones Digitales</span></button>
+        </div>
+
+        <!-- PANEL WEB -->
+        <div class="service-panel active" data-panel="web">
+          <div class="service-grid">
+            <article class="service-card featured reveal">
+              <div class="service-number">01</div>
+              <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+              <h3 data-i18n="web.s1.title">Software a medida</h3>
+              <p data-i18n="web.s1.desc">Sistemas y herramientas construidas alrededor de la forma real en que trabaja tu negocio.</p>
+              <ul>
+                <li data-i18n="web.s1.f1">Aplicaciones empresariales</li>
+                <li data-i18n="web.s1.f2">Dashboards</li>
+                <li data-i18n="web.s1.f3">Integraciones</li>
+                <li data-i18n="web.s1.f4">APIs y automatizaciones</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="web.s1.cta">Quiero una solución</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-number">02</div>
+              <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+              <h3 data-i18n="web.s2.title">Web & e-commerce</h3>
+              <p data-i18n="web.s2.desc">Experiencias web modernas, rápidas, responsivas y diseñadas para convertir visitas en oportunidades.</p>
+              <ul>
+                <li data-i18n="web.s2.f1">Landing pages</li>
+                <li data-i18n="web.s2.f2">Web corporativa</li>
+                <li data-i18n="web.s2.f3">Catálogos</li>
+                <li data-i18n="web.s2.f4">Tiendas online</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="web.s2.cta">Crear mi sitio</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-number">03</div>
+              <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+              <h3 data-i18n="web.s3.title">Aplicaciones móviles</h3>
+              <p data-i18n="web.s3.desc">Apps para conectar servicios, clientes y procesos desde cualquier lugar.</p>
+              <ul>
+                <li data-i18n="web.s3.f1">Apps híbridas</li>
+                <li data-i18n="web.s3.f2">Apps empresariales</li>
+                <li data-i18n="web.s3.f3">Paneles administrativos</li>
+                <li data-i18n="web.s3.f4">Integraciones</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="web.s3.cta">Crear una app</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-number">04</div>
+              <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+              <h3 data-i18n="web.s4.title">IA & automatización</h3>
+              <p data-i18n="web.s4.desc">Menos tareas repetitivas. Más tiempo para lo que realmente importa.</p>
+              <ul>
+                <li data-i18n="web.s4.f1">IA aplicada</li>
+                <li data-i18n="web.s4.f2">WhatsApp</li>
+                <li data-i18n="web.s4.f3">Flujos automáticos</li>
+                <li data-i18n="web.s4.f4">Procesamiento de datos</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="web.s4.cta">Automatizar</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-number">05</div>
+              <div class="service-icon"><i class="fa-solid fa-diagram-project"></i></div>
+              <h3 data-i18n="web.s5.title">Odoo & ERP</h3>
+              <p data-i18n="web.s5.desc">Digitalización de procesos comerciales y operativos con Odoo adaptado a cada empresa.</p>
+              <ul>
+                <li data-i18n="web.s5.f1">CRM y Ventas</li>
+                <li data-i18n="web.s5.f2">Studio</li>
+                <li data-i18n="web.s5.f3">Automatizaciones</li>
+                <li data-i18n="web.s5.f4">Capacitación</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="web.s5.cta">Digitalizar mi negocio</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-number">06</div>
+              <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+              <h3 data-i18n="web.s6.title">Consultoría tecnológica</h3>
+              <p data-i18n="web.s6.desc">Te ayudamos a elegir la mejor estrategia digital para tu negocio.</p>
+              <ul>
+                <li data-i18n="web.s6.f1">Arquitectura</li>
+                <li data-i18n="web.s6.f2">Transformación digital</li>
+                <li data-i18n="web.s6.f3">Optimización</li>
+                <li data-i18n="web.s6.f4">Acompañamiento</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="web.s6.cta">Asesorarme</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+          </div>
+        </div>
+
+        <!-- PANEL HARDWARE -->
+        <div class="service-panel" data-panel="hardware">
+          <div class="service-grid">
+            <article class="service-card featured reveal">
+              <div class="service-number">01</div>
+              <div class="service-icon"><i class="fa-solid fa-memory"></i></div>
+              <h3 data-i18n="hw.s1.title">Cambio de RAM</h3>
+              <p data-i18n="hw.s1.desc">Ampliamos o reemplazamos la memoria RAM de tu PC Gamer para mejorar el rendimiento.</p>
+              <ul>
+                <li data-i18n="hw.s1.f1">Diagnóstico de compatibilidad</li>
+                <li data-i18n="hw.s1.f2">Instalación profesional</li>
+                <li data-i18n="hw.s1.f3">Pruebas de rendimiento</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="hw.s1.cta">Mejorar mi RAM</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-number">02</div>
+              <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+              <h3 data-i18n="hw.s2.title">Fuentes de poder</h3>
+              <p data-i18n="hw.s2.desc">Reemplazamos fuentes dañadas por modelos certificados que soporten tu configuración.</p>
+              <ul>
+                <li data-i18n="hw.s2.f1">Cálculo de wattage</li>
+                <li data-i18n="hw.s2.f2">Fuentes 80+ certificadas</li>
+                <li data-i18n="hw.s2.f3">Instalación y cableado</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="hw.s2.cta">Cambiar fuente</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-number">03</div>
+              <div class="service-icon"><i class="fa-solid fa-microchip"></i></div>
+              <h3 data-i18n="hw.s3.title">Placas madre</h3>
+              <p data-i18n="hw.s3.desc">Sustituimos placas madre compatibles con tu procesador y RAM.</p>
+              <ul>
+                <li data-i18n="hw.s3.f1">Compatibilidad garantizada</li>
+                <li data-i18n="hw.s3.f2">Actualización de BIOS</li>
+                <li data-i18n="hw.s3.f3">Montaje completo</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="hw.s3.cta">Cambiar placa</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-number">04</div>
+              <div class="service-icon"><i class="fa-solid fa-hard-drive"></i></div>
+              <h3 data-i18n="hw.s4.title">SSD / NVMe</h3>
+              <p data-i18n="hw.s4.desc">Instalamos unidades SSD o NVMe para que tu sistema y juegos carguen en segundos.</p>
+              <ul>
+                <li data-i18n="hw.s4.f1">Migración de sistema</li>
+                <li data-i18n="hw.s4.f2">Optimización de arranque</li>
+                <li data-i18n="hw.s4.f3">Clonado de datos</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="hw.s4.cta">Instalar SSD</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-number">05</div>
+              <div class="service-icon"><i class="fa-solid fa-fan"></i></div>
+              <h3 data-i18n="hw.s5.title">Limpieza y mantenimiento</h3>
+              <p data-i18n="hw.s5.desc">Limpieza profunda, cambio de pasta térmica y revisión de ventilación.</p>
+              <ul>
+                <li data-i18n="hw.s5.f1">Limpieza interna</li>
+                <li data-i18n="hw.s5.f2">Pasta térmica</li>
+                <li data-i18n="hw.s5.f3">Flujo de aire</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="hw.s5.cta">Mantenimiento</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-number">06</div>
+              <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <h3 data-i18n="hw.s6.title">Optimización general</h3>
+              <p data-i18n="hw.s6.desc">Ajustamos software, drivers y Windows para maximizar el rendimiento.</p>
+              <ul>
+                <li data-i18n="hw.s6.f1">Actualización de drivers</li>
+                <li data-i18n="hw.s6.f2">Optimización Windows</li>
+                <li data-i18n="hw.s6.f3">Configuración</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="hw.s6.cta">Optimizar PC</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+          </div>
+        </div>
+
+        <!-- PANEL INVITACIONES -->
+        <div class="service-panel" data-panel="invitaciones">
+          <div class="service-grid">
+            <article class="service-card featured reveal">
+              <div class="service-number">01</div>
+              <div class="service-icon"><i class="fa-solid fa-heart"></i></div>
+              <h3 data-i18n="inv.s1.title">Invitaciones de Boda</h3>
+              <p data-i18n="inv.s1.desc">Invitaciones digitales elegantes con animaciones, música, galería y confirmación por WhatsApp.</p>
+              <ul>
+                <li data-i18n="inv.s1.f1">Diseño personalizado</li>
+                <li data-i18n="inv.s1.f2">Galería y música</li>
+                <li data-i18n="inv.s1.f3">RSVP WhatsApp</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="inv.s1.cta">Mi boda</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-number">02</div>
+              <div class="service-icon"><i class="fa-solid fa-cake-candles"></i></div>
+              <h3 data-i18n="inv.s2.title">XV Años</h3>
+              <p data-i18n="inv.s2.desc">Diseños modernos y coloridos con cuenta regresiva, mapas y sección de regalos.</p>
+              <ul>
+                <li data-i18n="inv.s2.f1">Cuenta regresiva</li>
+                <li data-i18n="inv.s2.f2">Mapa interactivo</li>
+                <li data-i18n="inv.s2.f3">Sección de regalos</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="inv.s2.cta">Mis XV</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-number">03</div>
+              <div class="service-icon"><i class="fa-solid fa-calendar-days"></i></div>
+              <h3 data-i18n="inv.s3.title">Cumpleaños y eventos</h3>
+              <p data-i18n="inv.s3.desc">Invitaciones para cumpleaños, baby showers y eventos especiales.</p>
+              <ul>
+                <li data-i18n="inv.s3.f1">Diseño temático</li>
+                <li data-i18n="inv.s3.f2">Formulario RSVP</li>
+                <li data-i18n="inv.s3.f3">Compartir por link</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="inv.s3.cta">Mi evento</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-number">04</div>
+              <div class="service-icon"><i class="fa-solid fa-music"></i></div>
+              <h3 data-i18n="inv.s4.title">Música y animaciones</h3>
+              <p data-i18n="inv.s4.desc">Música de fondo, animaciones suaves y transiciones elegantes.</p>
+              <ul>
+                <li data-i18n="inv.s4.f1">Música personalizada</li>
+                <li data-i18n="inv.s4.f2">Animaciones</li>
+                <li data-i18n="inv.s4.f3">Efectos visuales</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="inv.s4.cta">Personalizar</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-number">05</div>
+              <div class="service-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+              <h3 data-i18n="inv.s5.title">Mapas interactivos</h3>
+              <p data-i18n="inv.s5.desc">Mapas con la ubicación exacta del evento y botones para Google Maps o Waze.</p>
+              <ul>
+                <li data-i18n="inv.s5.f1">Google Maps</li>
+                <li data-i18n="inv.s5.f2">Botón Waze</li>
+                <li data-i18n="inv.s5.f3">Indicaciones claras</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="inv.s5.cta">Con mapa</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-number">06</div>
+              <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+              <h3 data-i18n="inv.s6.title">Diseño 100% personalizado</h3>
+              <p data-i18n="inv.s6.desc">Cada invitación se diseña desde cero según los colores y estilo del evento.</p>
+              <ul>
+                <li data-i18n="inv.s6.f1">Colores a elección</li>
+                <li data-i18n="inv.s6.f2">Tipografías únicas</li>
+                <li data-i18n="inv.s6.f3">Ilustraciones</li>
+              </ul>
+              <a href="contacto.html"><span data-i18n="inv.s6.cta">Diseñar</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section dark-section promise">
+      <div class="container promise-inner reveal">
+        <div class="section-label light" data-i18n="promise.label">Nuestra promesa</div>
+        <h2 data-i18n-html="promise.title">Tu proyecto no es<br><span>"uno más".</span></h2>
+        <p data-i18n="promise.desc">Cada proyecto representa una oportunidad de crear algo extraordinario.</p>
+        <a href="contacto.html" class="btn btn-white"><span data-i18n="promise.cta">Cuéntame tu idea</span> <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img src="https://limelab30.vercel.app/img/logo_lime.png" alt="LIMELAB">
+          <span>LIMELAB<small>TECHNOLOGIES</small></span>
+        </a>
+        <p data-i18n="footer.tagline">Innovamos con propósito, creando soluciones digitales que convierten ideas en realidades.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/limelab30" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61579192204687" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/523324464894" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.explore">Explora</h4>
+        <a href="index.html" data-i18n="nav.home">Inicio</a>
+        <a href="servicios.html" data-i18n="nav.services">Servicios</a>
+        <a href="portafolio.html" data-i18n="nav.portfolio">Portafolio</a>
+        <a href="nosotros.html" data-i18n="nav.about">Nosotros</a>
+        <a href="contacto.html" data-i18n="nav.contact">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.services">Servicios</h4>
+        <a href="servicios.html#web" data-i18n="footer.s1">Web & Software</a>
+        <a href="servicios.html#hardware" data-i18n="footer.s2">PC Gamer</a>
+        <a href="servicios.html#invitaciones" data-i18n="footer.s3">Invitaciones</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact">Contacto</h4>
+        <a href="mailto:mendezalberto295@gmail.com">Email</a>
+        <a href="https://wa.me/523324464894" target="_blank" rel="noopener">WhatsApp</a>
+        <span>Guadalajara, Jalisco</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span data-i18n="footer.copy">© 2026 LIMELAB Technologies. Hecho con ❤ en México.</span>
+      <span data-i18n="footer.tag">Innovación hecha con propósito.</span>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/523324464894" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i><span data-i18n="float.cta">Hablemos</span>
+  </a>
+  <button class="back-top" id="backTop" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
