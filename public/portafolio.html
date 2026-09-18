@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de proyectos de LIMELAB Technologies.">
+  <title>Portafolio | LIMELAB Technologies</title>
+  <link rel="icon" type="image/png" href="https://limelab30.vercel.app/img/logo_lime.png">
+  <meta name="theme-color" content="#b8ff3d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="portafolio">
+
+  <div class="cursor-glow"></div>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="brand">
+        <img src="https://limelab30.vercel.app/img/logo_lime.png" alt="LIMELAB">
+        <span>LIMELAB<small>TECHNOLOGIES</small></span>
+      </a>
+      <div class="nav-right">
+        <div class="lang-switch" id="langSwitch">
+          <button class="lang-btn active" data-lang="es">🇲🇽 ES</button>
+          <button class="lang-btn" data-lang="en">🇺🇸 EN</button>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menú" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" data-i18n="nav.home">Inicio</a>
+          <a href="servicios.html" data-i18n="nav.services">Servicios</a>
+          <a href="portafolio.html" class="active" data-i18n="nav.portfolio">Portafolio</a>
+          <a href="nosotros.html" data-i18n="nav.about">Nosotros</a>
+          <a href="contacto.html" class="nav-cta" data-i18n="nav.cta">Hablemos <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-label reveal" data-i18n="portfolio.label">Portafolio</div>
+        <h1 class="reveal" data-i18n-html="portfolio.title">Ideas que ya<br><span>se hicieron realidad.</span></h1>
+        <p class="reveal" data-i18n="portfolio.sub">Una selección de proyectos, mantenimientos e invitaciones digitales.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="portfolio-filters reveal" id="portfolioFilters">
+          <button class="filter active" data-filter="all" data-i18n="portfolio.filter.all">Todo</button>
+          <button class="filter" data-filter="web" data-i18n="portfolio.filter.web">Web & Software</button>
+          <button class="filter" data-filter="invitaciones" data-i18n="portfolio.filter.inv">Invitaciones</button>
+          <button class="filter" data-filter="hardware" data-i18n="portfolio.filter.hw">PC Gamer</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+
+          <article class="project reveal" data-category="web" data-type="image" data-src="https://limelab30.vercel.app/img/farmacia-drbee.png">
+            <div class="project-image">
+              <img loading="lazy" src="https://limelab30.vercel.app/img/farmacia-drbee.png" alt="Farmacia Dr. Bee">
+              <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
+            <div class="project-info">
+              <span data-i18n="portfolio.p1.tag">Sistema web</span>
+              <h3>Farmacia Dr. Bee</h3>
+              <p data-i18n="portfolio.p1.desc">Gestión de productos, usuarios e inventario.</p>
+              <div class="tags"><b>Laravel</b><b>MySQL</b><b>Bootstrap</b></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="web" data-type="image" data-src="https://limelab30.vercel.app/img/yomonalex.png">
+            <div class="project-image">
+              <img loading="lazy" src="https://limelab30.vercel.app/img/yomonalex.png" alt="Yomonalex">
+              <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
+            <div class="project-info">
+              <span data-i18n="portfolio.p2.tag">E-commerce</span>
+              <h3>Yomonalex</h3>
+              <p data-i18n="portfolio.p2.desc">Tienda online para productos de acero inoxidable.</p>
+              <div class="tags"><b>Laravel</b><b>MySQL</b><b>Tailwind</b></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="invitaciones" data-type="video" data-src="videos/invitacion-boda.mp4" data-poster="img/invitacion-boda-poster.jpg">
+            <div class="project-image">
+              <img loading="lazy" src="img/invitacion-boda-poster.jpg" alt="Invitación de Boda">
+              <div class="project-overlay video-overlay"><div class="play-btn"><i class="fa-solid fa-play"></i></div></div>
+              <div class="video-badge"><i class="fa-solid fa-video"></i> <span data-i18n="portfolio.video">Video</span></div>
+            </div>
+            <div class="project-info">
+              <span data-i18n="portfolio.p3.tag">Invitación digital</span>
+              <h3 data-i18n="portfolio.p3.title">Boda — Ana & Luis</h3>
+              <p data-i18n="portfolio.p3.desc">Invitación animada con música, galería y RSVP por WhatsApp.</p>
+              <div class="tags"><b>HTML</b><b>CSS</b><b>JavaScript</b></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="invitaciones" data-type="image" data-src="img/invitacion-xv.jpg">
+            <div class="project-image">
+              <img loading="lazy" src="img/invitacion-xv.jpg" alt="Invitación XV Años">
+              <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
+            <div class="project-info">
+              <span data-i18n="portfolio.p3.tag">Invitación digital</span>
+              <h3 data-i18n="portfolio.p4.title">XV Años — Sofía</h3>
+              <p data-i18n="portfolio.p4.desc">Diseño moderno con cuenta regresiva y mapa interactivo.</p>
+              <div class="tags"><b data-i18n="portfolio.p4.t1">XV Años</b><b data-i18n="portfolio.p4.t2">Animaciones</b><b data-i18n="portfolio.p4.t3">Mapa</b></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="hardware" data-type="image" data-src="img/pc-gamer-1.jpg">
+            <div class="project-image">
+              <img loading="lazy" src="img/pc-gamer-1.jpg" alt="PC Gamer RAM">
+              <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
+            <div class="project-info">
+              <span data-i18n="portfolio.p5.tag">PC Gamer</span>
+              <h3 data-i18n="portfolio.p5.title">Cambio de RAM y SSD</h3>
+              <p data-i18n="portfolio.p5.desc">Actualización completa con 32GB RAM y SSD NVMe 1TB.</p>
+              <div class="tags"><b>RAM</b><b>SSD NVMe</b><b data-i18n="portfolio.p5.t3">Optimización</b></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="hardware" data-type="video" data-src="videos/mantenimiento-pc.mp4" data-poster="img/mantenimiento-pc-poster.jpg">
+            <div class="project-image">
+              <img loading="lazy" src="img/mantenimiento-pc-poster.jpg" alt="Mantenimiento PC Gamer">
+              <div class="project-overlay video-overlay"><div class="play-btn"><i class="fa-solid fa-play"></i></div></div>
+              <div class="video-badge"><i class="fa-solid fa-video"></i> <span data-i18n="portfolio.video">Video</span></div>
+            </div>
+            <div class="project-info">
+              <span data-i18n="portfolio.p5.tag">PC Gamer</span>
+              <h3 data-i18n="portfolio.p6.title">Mantenimiento Completo</h3>
+              <p data-i18n="portfolio.p6.desc">Limpieza profunda, cambio de pasta térmica y optimización.</p>
+              <div class="tags"><b data-i18n="portfolio.p6.t1">Limpieza</b><b data-i18n="portfolio.p6.t2">Pasta térmica</b><b data-i18n="portfolio.p6.t3">Temperaturas</b></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="web" data-type="image" data-src="img/landing-startup.jpg">
+            <div class="project-image">
+              <img loading="lazy" src="img/landing-startup.jpg" alt="Landing Page">
+              <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
+            <div class="project-info">
+              <span data-i18n="portfolio.p7.tag">Landing page</span>
+              <h3 data-i18n="portfolio.p7.title">Startup Tecnológica</h3>
+              <p data-i18n="portfolio.p7.desc">Landing moderna con animaciones y formulario de contacto.</p>
+              <div class="tags"><b>React</b><b>Tailwind</b><b>Motion</b></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="hardware" data-type="image" data-src="img/fuente-poder.jpg">
+            <div class="project-image">
+              <img loading="lazy" src="img/fuente-poder.jpg" alt="Fuente de poder">
+              <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
+            <div class="project-info">
+              <span data-i18n="portfolio.p5.tag">PC Gamer</span>
+              <h3 data-i18n="portfolio.p8.title">Cambio de Fuente de Poder</h3>
+              <p data-i18n="portfolio.p8.desc">Instalación de fuente certificada 80+ Gold de 750W.</p>
+              <div class="tags"><b>80+ Gold</b><b data-i18n="portfolio.p8.t2">Cableado</b><b>Wattage</b></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section promise">
+      <div class="container promise-inner reveal">
+        <div class="section-label light" data-i18n="promise.label">Nuestra promesa</div>
+        <h2 data-i18n-html="promise.title">Tu proyecto no es<br><span>"uno más".</span></h2>
+        <p data-i18n="promise.desc">Cada proyecto representa una oportunidad de crear algo extraordinario.</p>
+        <a href="contacto.html" class="btn btn-white"><span data-i18n="promise.cta">Cuéntame tu idea</span> <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true">
+    <div class="gallery-modal-content">
+      <button class="gallery-close" id="galleryClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div class="gallery-modal-media" id="galleryMedia"></div>
+      <div class="gallery-modal-caption" id="galleryCaption"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img src="https://limelab30.vercel.app/img/logo_lime.png" alt="LIMELAB">
+          <span>LIMELAB<small>TECHNOLOGIES</small></span>
+        </a>
+        <p data-i18n="footer.tagline">Innovamos con propósito, creando soluciones digitales que convierten ideas en realidades.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/limelab30" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61579192204687" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/523324464894" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.explore">Explora</h4>
+        <a href="index.html" data-i18n="nav.home">Inicio</a>
+        <a href="servicios.html" data-i18n="nav.services">Servicios</a>
+        <a href="portafolio.html" data-i18n="nav.portfolio">Portafolio</a>
+        <a href="nosotros.html" data-i18n="nav.about">Nosotros</a>
+        <a href="contacto.html" data-i18n="nav.contact">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.services">Servicios</h4>
+        <a href="servicios.html#web" data-i18n="footer.s1">Web & Software</a>
+        <a href="servicios.html#hardware" data-i18n="footer.s2">PC Gamer</a>
+        <a href="servicios.html#invitaciones" data-i18n="footer.s3">Invitaciones</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact">Contacto</h4>
+        <a href="mailto:mendezalberto295@gmail.com">Email</a>
+        <a href="https://wa.me/523324464894" target="_blank" rel="noopener">WhatsApp</a>
+        <span>Guadalajara, Jalisco</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span data-i18n="footer.copy">© 2026 LIMELAB Technologies. Hecho con ❤ en México.</span>
+      <span data-i18n="footer.tag">Innovación hecha con propósito.</span>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/523324464894" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i><span data-i18n="float.cta">Hablemos</span>
+  </a>
+  <button class="back-top" id="backTop" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
