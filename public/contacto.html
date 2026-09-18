@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta a LIMELAB Technologies.">
+  <title>Contacto | LIMELAB Technologies</title>
+  <link rel="icon" type="image/png" href="https://limelab30.vercel.app/img/logo_lime.png">
+  <meta name="theme-color" content="#b8ff3d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contacto">
+
+  <div class="cursor-glow"></div>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="brand">
+        <img src="https://limelab30.vercel.app/img/logo_lime.png" alt="LIMELAB">
+        <span>LIMELAB<small>TECHNOLOGIES</small></span>
+      </a>
+      <div class="nav-right">
+        <div class="lang-switch" id="langSwitch">
+          <button class="lang-btn active" data-lang="es">🇲🇽 ES</button>
+          <button class="lang-btn" data-lang="en">🇺🇸 EN</button>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menú" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" data-i18n="nav.home">Inicio</a>
+          <a href="servicios.html" data-i18n="nav.services">Servicios</a>
+          <a href="portafolio.html" data-i18n="nav.portfolio">Portafolio</a>
+          <a href="nosotros.html" data-i18n="nav.about">Nosotros</a>
+          <a href="contacto.html" class="nav-cta active" data-i18n="nav.cta">Hablemos <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-label reveal" data-i18n="contact.label">Contacto</div>
+        <h1 class="reveal" data-i18n-html="contact.title">¿Qué vamos<br><span>a crear?</span></h1>
+        <p class="reveal" data-i18n="contact.sub">Cuéntame qué tienes en mente. Una idea, un problema, un proyecto o simplemente una pregunta.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <a href="https://wa.me/523324464894?text=Hola%20LIMELAB,%20quiero%20hablar%20sobre%20un%20proyecto." target="_blank" rel="noopener" class="contact-item whatsapp-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <small>WhatsApp</small>
+              <strong>+52 33 2446 4894</strong>
+              <span data-i18n="contact.whatsapp.cta">Escríbeme directamente →</span>
+            </div>
+          </a>
+          <a href="mailto:mendezalberto295@gmail.com" class="contact-item">
+            <i class="fa-regular fa-envelope"></i>
+            <div>
+              <small>Email</small>
+              <strong>mendezalberto295@gmail.com</strong>
+              <span data-i18n="contact.email.cta">Respuesta en 24 horas</span>
+            </div>
+          </a>
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <small data-i18n="contact.location.label">Ubicación</small>
+              <strong>Guadalajara, Jalisco</strong>
+              <span data-i18n="contact.location.cta">También trabajamos remotamente</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <label>
+              <span data-i18n="contact.form.name">Nombre completo *</span>
+              <input type="text" id="name" placeholder="¿Cómo te llamas?" data-i18n-placeholder="contact.form.name.ph" required>
+            </label>
+            <label>
+              <span data-i18n="contact.form.email">Email *</span>
+              <input type="email" id="email" placeholder="tu@email.com" data-i18n-placeholder="contact.form.email.ph" required>
+            </label>
+          </div>
+          <label>
+            <span data-i18n="contact.form.service">¿Qué necesitas?</span>
+            <select id="service">
+              <option value="No estoy seguro" data-i18n="contact.form.s0">No estoy seguro</option>
+              <option value="Sitio web / Software" data-i18n="contact.form.s1">Sitio web / Software</option>
+              <option value="Aplicación móvil" data-i18n="contact.form.s2">Aplicación móvil</option>
+              <option value="Mantenimiento PC Gamer" data-i18n="contact.form.s3">Mantenimiento PC Gamer</option>
+              <option value="Cambio de hardware" data-i18n="contact.form.s4">Cambio de hardware (RAM, fuente, etc.)</option>
+              <option value="Invitación digital" data-i18n="contact.form.s5">Invitación digital</option>
+              <option value="IA y automatización" data-i18n="contact.form.s6">IA y automatización</option>
+              <option value="Odoo / ERP" data-i18n="contact.form.s7">Odoo / ERP</option>
+              <option value="Otro" data-i18n="contact.form.s8">Otro</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="contact.form.message">Cuéntame sobre tu proyecto *</span>
+            <textarea id="message" rows="5" placeholder="Cuéntame brevemente qué quieres crear..." data-i18n-placeholder="contact.form.message.ph" required></textarea>
+          </label>
+          <button class="btn btn-primary form-submit" type="submit">
+            <span data-i18n="contact.form.submit">Enviar por WhatsApp</span> <i class="fa-brands fa-whatsapp"></i>
+          </button>
+          <small class="form-note" data-i18n="contact.form.note">Al enviar, se abrirá WhatsApp con tu mensaje listo para enviarlo.</small>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img src="https://limelab30.vercel.app/img/logo_lime.png" alt="LIMELAB">
+          <span>LIMELAB<small>TECHNOLOGIES</small></span>
+        </a>
+        <p data-i18n="footer.tagline">Innovamos con propósito, creando soluciones digitales que convierten ideas en realidades.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/limelab30" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61579192204687" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/523324464894" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.explore">Explora</h4>
+        <a href="index.html" data-i18n="nav.home">Inicio</a>
+        <a href="servicios.html" data-i18n="nav.services">Servicios</a>
+        <a href="portafolio.html" data-i18n="nav.portfolio">Portafolio</a>
+        <a href="nosotros.html" data-i18n="nav.about">Nosotros</a>
+        <a href="contacto.html" data-i18n="nav.contact">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.services">Servicios</h4>
+        <a href="servicios.html#web" data-i18n="footer.s1">Web & Software</a>
+        <a href="servicios.html#hardware" data-i18n="footer.s2">PC Gamer</a>
+        <a href="servicios.html#invitaciones" data-i18n="footer.s3">Invitaciones</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact">Contacto</h4>
+        <a href="mailto:mendezalberto295@gmail.com">Email</a>
+        <a href="https://wa.me/523324464894" target="_blank" rel="noopener">WhatsApp</a>
+        <span>Guadalajara, Jalisco</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span data-i18n="footer.copy">© 2026 LIMELAB Technologies. Hecho con ❤ en México.</span>
+      <span data-i18n="footer.tag">Innovación hecha con propósito.</span>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/523324464894" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i><span data-i18n="float.cta">Hablemos</span>
+  </a>
+  <button class="back-top" id="backTop" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
