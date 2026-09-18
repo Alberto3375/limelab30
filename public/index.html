@@ -10,6 +10,9 @@
   <link rel="icon" type="image/png" href="https://limelab30.vercel.app/img/logo_lime.png">
   <link rel="apple-touch-icon" href="https://limelab30.vercel.app/img/logo_lime.png">
   <meta name="theme-color" content="#b8ff3d">
+  <meta name="color-scheme" content="dark light">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="LIMELAB Technologies">
 
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,14 +23,44 @@
 </head>
 <body>
 
+  <!--
+    ============================================================
+    LIMELAB TECHNOLOGIES — SITIO PRINCIPAL
+    ------------------------------------------------------------
+    Estructura:
+      01. Header / navegación
+      02. Hero
+      03. Marquee
+      04. Introducción
+      05. Servicios
+      06. Proceso
+      07. Valores
+      08. Nosotros / historia
+      09. Misión y visión
+      10. Portafolio
+      11. Promesa
+      12. Contacto
+      13. Footer
+      14. Modal de galería
+    ------------------------------------------------------------
+    Dependencias:
+      - style.css  → identidad visual, layout y responsive
+      - i18n.js    → traducciones ES / EN
+      - script.js  → interacciones, filtros, modal y formulario
+    Paleta visual existente:
+      - Lime: #b8ff3d
+      - Base oscura y neutros definidos en style.css
+    ============================================================
+  -->
+
   <div class="cursor-glow"></div>
   <div class="progress-bar" id="progressBar"></div>
 
   <!-- ==================== HEADER ==================== -->
   <header class="header" id="header">
-    <nav class="nav container">
+    <nav class="nav container" aria-label="Navegación principal">
       <a href="#home" class="brand">
-        <img src="https://limelab30.vercel.app/img/logo_lime.png" alt="LIMELAB Technologies">
+        <img loading="eager" decoding="async" src="https://limelab30.vercel.app/img/logo_lime.png" alt="LIMELAB Technologies">
         <span>LIMELAB<small>TECHNOLOGIES</small></span>
       </a>
 
@@ -42,11 +75,11 @@
           </button>
         </div>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="navLinks" aria-expanded="false">
           <i class="fa-solid fa-bars"></i>
         </button>
 
-        <div class="nav-links" id="navLinks">
+        <div class="nav-links" id="navLinks" aria-label="Navegación principal">
           <a href="#home" data-i18n="nav.home">Inicio</a>
           <a href="#services" data-i18n="nav.services">Servicios</a>
           <a href="#portfolio" data-i18n="nav.portfolio">Portafolio</a>
@@ -78,7 +111,7 @@
             <a href="#services" class="btn btn-primary">
               <span data-i18n="hero.cta1">Explorar servicios</span> <i class="fa-solid fa-arrow-down"></i>
             </a>
-            <a href="https://wa.me/523324464894?text=Hola%20LIMELAB,%20me%20gustaría%20conocer%20sus%20servicios." target="_blank" rel="noopener" class="btn btn-ghost">
+            <a href="https://wa.me/523324464894?text=Hola%20LIMELAB,%20me%20gustaría%20conocer%20sus%20servicios." target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
               <i class="fa-brands fa-whatsapp"></i> WhatsApp
             </a>
           </div>
@@ -177,19 +210,19 @@
 
         <!-- TABS -->
         <div class="service-tabs reveal" id="serviceTabs">
-          <button class="tab active" data-tab="web">
+          <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="panel-web" data-tab="web">
             <i class="fa-solid fa-code"></i> <span data-i18n="services.tab1">Web & Software</span>
           </button>
-          <button class="tab" data-tab="hardware">
+          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-hardware" data-tab="hardware">
             <i class="fa-solid fa-microchip"></i> <span data-i18n="services.tab2">PC Gamer & Hardware</span>
           </button>
-          <button class="tab" data-tab="invitaciones">
+          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-invitaciones" data-tab="invitaciones">
             <i class="fa-solid fa-heart"></i> <span data-i18n="services.tab3">Invitaciones Digitales</span>
           </button>
         </div>
 
         <!-- PANEL WEB -->
-        <div class="service-panel active" data-panel="web">
+        <div class="service-panel active" id="panel-web" role="tabpanel" data-panel="web">
           <div class="service-grid">
             <article class="service-card featured reveal">
               <div class="service-number">01</div>
@@ -278,7 +311,7 @@
         </div>
 
         <!-- PANEL HARDWARE -->
-        <div class="service-panel" data-panel="hardware">
+        <div class="service-panel" id="panel-hardware" role="tabpanel" data-panel="hardware">
           <div class="service-grid">
             <article class="service-card featured reveal">
               <div class="service-number">01</div>
@@ -361,7 +394,7 @@
         </div>
 
         <!-- PANEL INVITACIONES -->
-        <div class="service-panel" data-panel="invitaciones">
+        <div class="service-panel" id="panel-invitaciones" role="tabpanel" data-panel="invitaciones">
           <div class="service-grid">
             <article class="service-card featured reveal">
               <div class="service-number">01</div>
@@ -583,7 +616,7 @@
           <!-- 1 - Web -->
           <article class="project reveal" data-category="web" data-type="image" data-src="https://limelab30.vercel.app/img/farmacia-drbee.png">
             <div class="project-image">
-              <img src="https://limelab30.vercel.app/img/farmacia-drbee.png" alt="Farmacia Dr. Bee">
+              <img loading="lazy" decoding="async" src="https://limelab30.vercel.app/img/farmacia-drbee.png" alt="Farmacia Dr. Bee">
               <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
             </div>
             <div class="project-info">
@@ -597,7 +630,7 @@
           <!-- 2 - Web -->
           <article class="project reveal" data-category="web" data-type="image" data-src="https://limelab30.vercel.app/img/yomonalex.png">
             <div class="project-image">
-              <img src="https://limelab30.vercel.app/img/yomonalex.png" alt="Yomonalex">
+              <img loading="lazy" decoding="async" src="https://limelab30.vercel.app/img/yomonalex.png" alt="Yomonalex">
               <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
             </div>
             <div class="project-info">
@@ -611,7 +644,7 @@
           <!-- 3 - Invitación VIDEO -->
           <article class="project reveal" data-category="invitaciones" data-type="video" data-src="videos/invitacion-boda.mp4" data-poster="img/invitacion-boda-poster.jpg">
             <div class="project-image">
-              <img src="img/invitacion-boda-poster.jpg" alt="Invitación de Boda">
+              <img loading="lazy" decoding="async" src="img/invitacion-boda-poster.jpg" alt="Invitación de Boda">
               <div class="project-overlay video-overlay">
                 <div class="play-btn"><i class="fa-solid fa-play"></i></div>
               </div>
@@ -628,7 +661,7 @@
           <!-- 4 - Invitación IMAGEN -->
           <article class="project reveal" data-category="invitaciones" data-type="image" data-src="img/invitacion-xv.jpg">
             <div class="project-image">
-              <img src="img/invitacion-xv.jpg" alt="Invitación XV Años">
+              <img loading="lazy" decoding="async" src="img/invitacion-xv.jpg" alt="Invitación XV Años">
               <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
             </div>
             <div class="project-info">
@@ -642,7 +675,7 @@
           <!-- 5 - Hardware IMAGEN -->
           <article class="project reveal" data-category="hardware" data-type="image" data-src="img/pc-gamer-1.jpg">
             <div class="project-image">
-              <img src="img/pc-gamer-1.jpg" alt="PC Gamer RAM">
+              <img loading="lazy" decoding="async" src="img/pc-gamer-1.jpg" alt="PC Gamer RAM">
               <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
             </div>
             <div class="project-info">
@@ -656,7 +689,7 @@
           <!-- 6 - Hardware VIDEO -->
           <article class="project reveal" data-category="hardware" data-type="video" data-src="videos/mantenimiento-pc.mp4" data-poster="img/mantenimiento-pc-poster.jpg">
             <div class="project-image">
-              <img src="img/mantenimiento-pc-poster.jpg" alt="Mantenimiento PC Gamer">
+              <img loading="lazy" decoding="async" src="img/mantenimiento-pc-poster.jpg" alt="Mantenimiento PC Gamer">
               <div class="project-overlay video-overlay">
                 <div class="play-btn"><i class="fa-solid fa-play"></i></div>
               </div>
@@ -673,7 +706,7 @@
           <!-- 7 - Web -->
           <article class="project reveal" data-category="web" data-type="image" data-src="img/landing-startup.jpg">
             <div class="project-image">
-              <img src="img/landing-startup.jpg" alt="Landing Page">
+              <img loading="lazy" decoding="async" src="img/landing-startup.jpg" alt="Landing Page">
               <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
             </div>
             <div class="project-info">
@@ -687,7 +720,7 @@
           <!-- 8 - Hardware -->
           <article class="project reveal" data-category="hardware" data-type="image" data-src="img/fuente-poder.jpg">
             <div class="project-image">
-              <img src="img/fuente-poder.jpg" alt="Fuente de poder">
+              <img loading="lazy" decoding="async" src="img/fuente-poder.jpg" alt="Fuente de poder">
               <div class="project-overlay"><span data-i18n="portfolio.view">Ver proyecto</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
             </div>
             <div class="project-info">
@@ -729,7 +762,7 @@
 
         <div class="contact-grid">
           <div class="contact-info reveal">
-            <a href="https://wa.me/523324464894?text=Hola%20LIMELAB,%20quiero%20hablar%20sobre%20un%20proyecto." target="_blank" rel="noopener" class="contact-item whatsapp-item">
+            <a href="https://wa.me/523324464894?text=Hola%20LIMELAB,%20quiero%20hablar%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" class="contact-item whatsapp-item">
               <i class="fa-brands fa-whatsapp"></i>
               <div>
                 <small>WhatsApp</small>
@@ -759,11 +792,11 @@
             <div class="form-row">
               <label>
                 <span data-i18n="contact.form.name">Nombre completo *</span>
-                <input type="text" id="name" placeholder="¿Cómo te llamas?" data-i18n-placeholder="contact.form.name.ph" required>
+                <input type="text" id="name" autocomplete="name" placeholder="¿Cómo te llamas?" data-i18n-placeholder="contact.form.name.ph" required>
               </label>
               <label>
                 <span data-i18n="contact.form.email">Email *</span>
-                <input type="email" id="email" placeholder="tu@email.com" data-i18n-placeholder="contact.form.email.ph" required>
+                <input type="email" id="email" autocomplete="email" placeholder="tu@email.com" data-i18n-placeholder="contact.form.email.ph" required>
               </label>
             </div>
             <label>
@@ -799,14 +832,14 @@
     <div class="container footer-main">
       <div class="footer-brand">
         <a href="#home" class="brand">
-          <img src="https://limelab30.vercel.app/img/logo_lime.png" alt="LIMELAB">
+          <img loading="lazy" decoding="async" src="https://limelab30.vercel.app/img/logo_lime.png" alt="LIMELAB">
           <span>LIMELAB<small>TECHNOLOGIES</small></span>
         </a>
         <p data-i18n="footer.tagline">Innovamos con propósito, creando soluciones digitales que convierten ideas en realidades.</p>
         <div class="socials">
-          <a href="https://www.instagram.com/limelab30" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.facebook.com/profile.php?id=61579192204687" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://wa.me/523324464894" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/limelab30" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61579192204687" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/523324464894" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
 
@@ -831,7 +864,7 @@
       <div class="footer-col">
         <h4 data-i18n="footer.contact">Contacto</h4>
         <a href="mailto:mendezalberto295@gmail.com">Email</a>
-        <a href="https://wa.me/523324464894" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://wa.me/523324464894" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         <span>Guadalajara, Jalisco</span>
       </div>
     </div>
@@ -843,7 +876,7 @@
   </footer>
 
   <!-- ==================== MODAL GALERÍA ==================== -->
-  <div class="gallery-modal" id="galleryModal">
+  <div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-labelledby="galleryCaption">
     <div class="gallery-modal-content">
       <button class="gallery-close" id="galleryClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
       <div class="gallery-modal-media" id="galleryMedia"></div>
@@ -851,11 +884,11 @@
     </div>
   </div>
 
-  <a href="https://wa.me/523332250942?text=Hola%20LIMELAB,%20quiero%20cotizar%20un%20proyecto." class="floating-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <a href="https://wa.me/523332250942?text=Hola%20LIMELAB,%20quiero%20cotizar%20un%20proyecto." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
     <i class="fa-brands fa-whatsapp"></i><span data-i18n="float.cta">Hablemos</span>
   </a>
 
-  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <button class="back-top" id="backTop" type="button" aria-label="Volver al inicio"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="i18n.js"></script>
   <script src="script.js"></script>
